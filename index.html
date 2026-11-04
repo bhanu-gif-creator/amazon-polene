@@ -56,7 +56,7 @@
 </nav>
 
 <div class="results-top">
-  <strong>1-6 of 6 results for <em>"polène"</em></strong>
+  <strong>1-12 of 12 results for <em>"polène"</em></strong>
   <button class="sort">Sort by: Featured ▾</button>
 </div>
 
@@ -66,7 +66,7 @@
   <div class="filter-block"><h3>Categories</h3><div class="check"><span class="box"></span> Bags</div><div class="check"><span class="box"></span> Small Leather Goods</div><div class="check"><span class="box"></span> Jewelry</div></div>
   <div class="filter-block"><h3>Customer Review</h3><div class="stars">★★★★☆ <span class="small">& Up</span></div></div>
   <div class="filter-block"><h3>Brands</h3><div class="check"><span class="box"></span> POLÈNE</div></div>
-  <div class="filter-block"><h3>Prices</h3><strong>110 € – 480 €</strong><div class="range"></div><p class="small">Under €200<br>€200 to €400<br>Over €400</p></div>
+  <div class="filter-block"><h3>Prices</h3><strong>€110 – €490</strong><div class="range"></div><p class="small">Under €200<br>€200 to €400<br>Over €400</p></div>
   <div class="filter-block"><h3>Colour</h3><div class="check"><span class="box" style="background:#111"></span> Black</div><div class="check"><span class="box" style="background:#b87842"></span> Camel</div><div class="check"><span class="box" style="background:#c8a96b"></span> Gold</div></div>
 </aside>
 
@@ -92,7 +92,7 @@
 
   <section class="results-head">
     <h2>Results</h2>
-    <p><a href="#case">Learn about these results.</a> Prices, availability, reviews, Prime and delivery information are shown only for this academic demonstration.</p>
+    <p><a href="#case">Learn about these results.</a> Prices, availability, reviews, Prime and delivery information are shown only for this academic demonstration. Some additional listings use campaign imagery rather than exact product photos.</p>
   </section>
 
   <section class="products" id="products"></section>
@@ -127,18 +127,24 @@ const products=[
 {id:3,name:'POLÈNE Numéro Neuf Mini — Textured Black Edition, mini bag',cat:'bags',price:390,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-neuf-mini-noir-grain.png?v=1682504822&width=1920',reviews:'77'},
 {id:4,name:'POLÈNE Neiti Card Holder — Duo Camel Edition',cat:'leather',price:110,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_porte-carte-neiti-camel_bfdd284d-7695-44f8-8a27-72f145dba5a1.png?v=1689085415&width=1920',reviews:'41'},
 {id:5,name:'POLÈNE Ormé Bangle — Gold & Camel Leather Edition',cat:'jewelry',price:220,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_jonc-orme-or-cuir-camel.png?v=1762953637&width=1920',reviews:'36'},
-{id:6,name:'POLÈNE Éole Hoop Earrings — 24-carat gold finish',cat:'jewelry',price:180,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_boucles_creoles_eole_f5757467-2665-4d80-aacc-6c902e62a487.png?v=1730111992&width=1920',reviews:'52'}
+{id:6,name:'POLÈNE Éole Hoop Earrings — 24-carat gold finish',cat:'jewelry',price:180,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_boucles_creoles_eole_f5757467-2665-4d80-aacc-6c902e62a487.png?v=1730111992&width=1920',reviews:'52'},
+{id:7,name:'POLÈNE Numéro Un — Structured Leather Handbag',cat:'bags',price:420,img:'https://www.polene-paris.com/cdn/shop/files/01_Visuel_Mega_Menu_2026.jpg?v=1783586333&width=1920',reviews:'—',illustrative:true},
+{id:8,name:'POLÈNE Numéro Sept — Shoulder Bag',cat:'bags',price:450,img:'https://www.polene-paris.com/cdn/shop/files/01_Visuel_Mega_Menu_2026.jpg?v=1783586333&width=1920',reviews:'—',illustrative:true},
+{id:9,name:'POLÈNE Numéro Huit — Bucket Bag',cat:'bags',price:390,img:'https://www.polene-paris.com/cdn/shop/files/01_Visuel_Mega_Menu_2026.jpg?v=1783586333&width=1920',reviews:'—',illustrative:true},
+{id:10,name:'POLÈNE Tonca — Sculptural Shoulder Bag',cat:'bags',price:440,img:'https://www.polene-paris.com/cdn/shop/files/01_Visuel_Mega_Menu_2026.jpg?v=1783586333&width=1920',reviews:'—',illustrative:true},
+{id:11,name:'POLÈNE Mokki — Leather Handbag',cat:'bags',price:490,img:'https://www.polene-paris.com/cdn/shop/files/01_Visuel_Mega_Menu_2026.jpg?v=1783586333&width=1920',reviews:'—',illustrative:true},
+{id:12,name:'POLÈNE Béri — Compact Leather Bag',cat:'bags',price:380,img:'https://www.polene-paris.com/cdn/shop/files/01_Visuel_Mega_Menu_2026.jpg?v=1783586333&width=1920',reviews:'—',illustrative:true}
 ];
 let cart=[];
 const euro=n=>n.toLocaleString('fr-FR',{style:'currency',currency:'EUR'});
 function render(list=products){
  document.getElementById('products').innerHTML=list.map(p=>`
  <article class="product">
-   <div class="photo"><img loading="lazy" src="${p.img}" alt="${p.name}"><span class="badge">Concept Store</span></div>
+   <div class="photo"><img loading="lazy" src="${p.img}" alt="${p.illustrative ? 'Illustrative Polène campaign image, not exact product: ' : 'Product image: '}${p.name}"><span class="badge">${p.illustrative ? 'Illustrative image' : 'Concept Store'}</span></div>
    <div class="pbody">
      <h3>${p.name}</h3>
-     <div class="rating">★★★★☆ <span>${p.reviews}</span></div>
-     <div class="price"><sup>€</sup>${Math.floor(p.price)}<sup>00</sup></div>
+     <div class="rating">${p.illustrative ? '<span style="color:#565959">Concept listing · no customer reviews</span>' : '★★★★☆ <span>Demo reviews</span>'}</div>
+     <div class="price"><sup>€</sup>${Math.floor(p.price)}<sup>00</sup></div>${p.illustrative ? '<div class="small">Illustrative price · campaign image is not this product</div>' : ''}
      <div class="prime">✓ prime <span style="color:#565959;font-weight:400">simulation</span></div>
      <div class="delivery"><strong>FREE Delivery</strong><br>Prototype — no real orders</div>
      <button class="add" onclick="add(${p.id})">Add to Basket</button>
