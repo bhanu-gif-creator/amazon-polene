@@ -5,152 +5,154 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#131921">
 <title>Amazon.fr × Polène | Concept académique</title>
-<meta name="description" content="Concept académique non officiel Amazon.fr × Polène pour un projet KEDGE Business School.">
+<meta name="description" content="Prototype académique non officiel d'une page Amazon.fr pour Polène, réalisé pour KEDGE Business School.">
 <link rel="preconnect" href="https://www.polene-paris.com">
 <style>
-:root{--navy:#131921;--nav2:#232f3e;--orange:#ff9900;--orange2:#febd69;--amazon-blue:#007185;--paper:#fff;--bg:#eaeded;--text:#0f1111;--muted:#565959;--line:#d5d9d9;--polene:#eee8df}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}a{text-decoration:none;color:inherit}button,input{font:inherit}button{cursor:pointer}
-.disclaimer{background:#fff3cd;color:#6b5200;text-align:center;padding:9px 12px;font-size:12px;border-bottom:1px solid #efd37b;font-weight:700}
-.amazon-header{background:var(--navy);color:#fff;display:grid;grid-template-columns:auto auto 1fr auto auto auto;align-items:center;gap:10px;padding:8px 14px;position:sticky;top:0;z-index:30}
-.brand{font-size:27px;font-weight:700;letter-spacing:-1.5px;padding:8px 7px;border:1px solid transparent;white-space:nowrap}.brand:hover,.headbox:hover{border-color:#fff}.brand .fr{font-size:14px;font-weight:400;letter-spacing:0}.brand .smile{color:var(--orange);font-size:18px;margin-left:1px}
-.headbox{padding:7px 8px;border:1px solid transparent;line-height:1.15}.headbox small{display:block;color:#ccc;font-size:11px}.headbox strong{font-size:13px}
-.searchbar{display:flex;height:42px;min-width:120px}.searchbar select{width:60px;border:0;background:#e6e6e6;padding:0 6px;border-radius:5px 0 0 5px;color:#555}.searchbar input{flex:1;border:0;padding:0 13px;min-width:0;font-size:15px;outline:0}.searchbar button{width:49px;border:0;background:var(--orange2);border-radius:0 5px 5px 0;font-size:20px}
-.cartbtn{background:transparent;color:#fff;border:1px solid transparent;padding:8px 9px;font-weight:700;white-space:nowrap}.cartbtn:hover{border-color:#fff}.cartcount{color:var(--orange);font-size:17px}
-.subnav{background:var(--nav2);color:#fff;display:flex;gap:22px;align-items:center;padding:9px 16px;font-size:13px;overflow:auto;white-space:nowrap}.subnav a:hover{text-decoration:underline}.subnav .polene-link{font-weight:700;color:#fff}
-.hero{background:linear-gradient(90deg,#eee8df 0 47%,transparent 47%),#ddd;display:grid;grid-template-columns:47% 53%;min-height:520px;position:relative;overflow:hidden}.hero-copy{padding:65px clamp(25px,6vw,90px);display:flex;flex-direction:column;justify-content:center;z-index:2}.hero-copy .sponsored{font-size:11px;color:#656565;margin-bottom:14px}.hero h1{font:normal clamp(42px,5vw,75px)/1.02 Georgia,serif;margin:0 0 18px;color:#252525}.hero p{font-size:16px;line-height:1.7;max-width:500px;color:#4c4c4c}.hero .shop{background:#ffd814;border:1px solid #fcd200;border-radius:20px;padding:11px 22px;align-self:flex-start;margin-top:15px;font-size:13px}.hero .shop:hover{background:#f7ca00}.hero-img{position:relative}.hero-img img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.credit{position:absolute;right:10px;bottom:10px;background:#ffffffd9;padding:5px 8px;font-size:10px}
-.page{max-width:1480px;margin:-25px auto 0;position:relative;z-index:3;padding:0 18px 45px}.brandbar{background:#fff;padding:23px 28px;box-shadow:0 2px 6px #00000018;display:flex;justify-content:space-between;gap:20px;align-items:center}.polene-logo{font:normal 34px Georgia,serif;letter-spacing:.18em}.brandbar p{margin:4px 0;color:var(--muted);font-size:13px}.academic-pill{background:#f3f3f3;border:1px solid var(--line);border-radius:16px;padding:7px 12px;font-size:11px;white-space:nowrap}
-.section{background:#fff;margin-top:18px;padding:30px}.section-title{display:flex;justify-content:space-between;gap:15px;align-items:end;border-bottom:1px solid #eee;padding-bottom:15px}.section-title h2{font-size:26px;margin:0}.section-title p{margin:0;color:var(--muted);font-size:13px}.filters{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0}.chip{border:1px solid #888c8c;background:#fff;border-radius:18px;padding:8px 15px;font-size:12px}.chip.active,.chip:hover{border-color:#2162a1;background:#eef6ff}.collection-search{border:1px solid #888c8c;border-radius:7px;padding:9px 12px;min-width:230px}
-.products{display:grid;grid-template-columns:repeat(6,1fr);gap:15px}.product{border:1px solid #e3e6e6;background:#fff;padding:14px;display:flex;flex-direction:column;min-width:0}.product-img{height:240px;background:#f7f7f7;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.product-img img{width:100%;height:100%;object-fit:contain;padding:10px;transition:.3s}.product:hover img{transform:scale(1.04)}.badge{position:absolute;top:8px;left:8px;background:#cc0c39;color:#fff;font-size:10px;padding:5px 7px}.product h3{font-size:15px;line-height:1.35;margin:13px 0 6px;color:#0f1111;min-height:40px}.product h3:hover{color:#c7511f}.desc{font-size:12px;color:var(--muted);line-height:1.45;min-height:34px}.rating{color:#de7921;font-size:14px;margin-top:8px}.rating span{color:var(--amazon-blue);font-size:11px;margin-left:5px}.price{margin:8px 0 5px;font-size:24px}.price sup{font-size:11px;vertical-align:top}.prime{font-size:11px;color:#00a8e1;font-weight:700}.delivery{font-size:11px;line-height:1.5;margin:7px 0 12px}.product button{margin-top:auto;background:#ffd814;border:1px solid #fcd200;border-radius:18px;padding:8px 10px;font-size:12px}.product button:hover{background:#f7ca00}
-.a-plus{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;margin-top:18px}.a-plus img{width:100%;height:500px;object-fit:cover}.a-copy{background:#eee8df;padding:55px;display:flex;flex-direction:column;justify-content:center}.a-copy .kicker{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#666}.a-copy h2{font:normal 42px Georgia,serif;margin:12px 0}.a-copy p{line-height:1.8;color:#4d4d4d}.learn{color:var(--amazon-blue);font-size:13px;font-weight:700}.learn:hover{text-decoration:underline;color:#c7511f}
-.case{background:#fff;margin-top:18px;padding:34px}.case h2{margin-top:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{border:1px solid var(--line);padding:23px;background:#fafafa}.card h3{font-size:16px;margin:0 0 10px}.card p{font-size:13px;color:var(--muted);line-height:1.6;margin:0}
-.backtop{display:block;text-align:center;background:#37475a;color:#fff;padding:15px;font-size:12px}.footer{background:#232f3e;color:#ddd;padding:35px max(5vw,30px);display:grid;grid-template-columns:1fr 1fr;gap:30px;font-size:12px;line-height:1.7}.footer strong{color:#fff}.footer-note{background:#131a22;color:#bbb;text-align:center;padding:20px;font-size:11px}
-.overlay{position:fixed;inset:0;background:#0008;z-index:50;display:none}.overlay.show{display:block}.drawer{position:fixed;right:0;top:0;width:min(460px,100vw);height:100vh;background:#fff;z-index:51;transform:translateX(105%);transition:.3s;display:flex;flex-direction:column;box-shadow:-10px 0 30px #0003}.drawer.show{transform:translateX(0)}.drawer-head{display:flex;justify-content:space-between;align-items:center;padding:20px;background:#f0f2f2;border-bottom:1px solid var(--line)}.close{border:0;background:transparent;font-size:26px}.drawer-items{padding:18px;overflow:auto;flex:1}.cart-item{display:flex;justify-content:space-between;gap:15px;padding:15px 0;border-bottom:1px solid #ddd}.remove{background:none;border:0;color:var(--amazon-blue);font-size:11px;padding:0}.drawer-bottom{padding:20px;border-top:1px solid #ddd}.checkout{width:100%;background:#ffd814;border:1px solid #fcd200;border-radius:20px;padding:11px}.toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,100px);background:#fff;border:1px solid #888;padding:14px 22px;z-index:60;box-shadow:0 2px 12px #0003;opacity:0;transition:.3s}.toast.show{transform:translate(-50%,0);opacity:1}
-@media(max-width:1200px){.products{grid-template-columns:repeat(3,1fr)}.amazon-header{grid-template-columns:auto 1fr auto auto}.location,.lang{display:none}.searchbar{grid-column:2/3}}
-@media(max-width:760px){.amazon-header{grid-template-columns:auto 1fr auto;padding:7px}.account,.orders{display:none}.brand{font-size:23px}.searchbar{grid-column:1/-1;grid-row:2;height:40px}.subnav{gap:16px}.hero{grid-template-columns:1fr;background:#eee8df}.hero-copy{padding:45px 25px}.hero-img{height:360px}.hero-img img{position:relative}.page{margin:0;padding:0 10px 25px}.brandbar{align-items:flex-start}.academic-pill{display:none}.section{padding:20px 12px}.section-title{display:block}.section-title p{margin-top:6px}.products{grid-template-columns:repeat(2,1fr);gap:9px}.product{padding:9px}.product-img{height:190px}.a-plus{grid-template-columns:1fr}.a-plus img{height:330px}.a-copy{padding:35px 25px}.cards{grid-template-columns:1fr}.footer{grid-template-columns:1fr}.collection-search{width:100%}}
-@media(max-width:430px){.products{grid-template-columns:1fr 1fr}.product h3{font-size:13px}.price{font-size:20px}.product-img{height:165px}.hero h1{font-size:44px}.polene-logo{font-size:28px}}
+:root{--navy:#131921;--nav2:#232f3e;--orange:#ff9900;--orange2:#febd69;--blue:#007185;--text:#0f1111;--muted:#565959;--line:#ddd;--soft:#f3f3f3}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff}button,input,select{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inherit}
+.academic{background:#fff6d8;border-bottom:1px solid #efd67f;color:#6f5600;text-align:center;font-size:11px;font-weight:700;padding:6px 10px}
+.header{background:var(--navy);color:#fff;display:grid;grid-template-columns:auto auto 1fr auto auto auto auto;align-items:center;gap:10px;padding:8px 18px}
+.amz{font-size:31px;font-weight:700;letter-spacing:-2px;white-space:nowrap}.amz .dot{font-size:13px;letter-spacing:0}.amz .smile{display:block;height:5px;width:66px;border-bottom:4px solid var(--orange);border-radius:0 0 50% 50%;margin:-5px 0 0 10px;transform:rotate(-3deg)}
+.loc,.hbox{line-height:1.08;padding:7px;border:1px solid transparent}.loc:hover,.hbox:hover,.amz:hover,.cart:hover{border-color:#fff}.loc small,.hbox small{font-size:11px;color:#ccc;display:block}.loc strong,.hbox strong{font-size:13px}.search{height:42px;display:flex}.search select{width:61px;border:0;background:#e6e6e6;color:#555;border-radius:5px 0 0 5px;padding:0 6px}.search input{min-width:0;flex:1;border:0;padding:0 14px;font-size:15px;outline:0}.search button{width:53px;border:0;background:var(--orange2);border-radius:0 5px 5px 0;font-size:23px}.cart{border:1px solid transparent;background:transparent;color:#fff;font-weight:700;padding:7px 8px;white-space:nowrap;font-size:14px}.cart b{color:var(--orange);font-size:17px}
+.nav1{background:var(--nav2);color:#fff;padding:9px 18px;display:flex;gap:22px;overflow:auto;white-space:nowrap;font-size:13px;font-weight:600}.nav1 a:hover{text-decoration:underline}.nav2{border-bottom:1px solid #ccc;box-shadow:0 1px 4px #0002;padding:9px 25px;display:flex;gap:32px;overflow:auto;white-space:nowrap;font-size:12px;background:#fff}.nav2 a:hover{color:#c45500;text-decoration:underline}
+.results-top{padding:14px 22px;border-bottom:1px solid #ddd;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:14px}.results-top strong em{color:#c45500;font-style:normal}.sort{border:1px solid #aaa;border-radius:8px;background:#f7fafa;padding:7px 10px;font-size:12px}
+.layout{display:grid;grid-template-columns:260px 1fr;max-width:1800px;margin:auto}
+.sidebar{padding:22px 20px;border-right:1px solid #ddd;font-size:13px}.filter-block{margin-bottom:22px}.filter-block h3{font-size:14px;margin:0 0 9px}.check{display:flex;gap:7px;align-items:center;margin:8px 0}.box{width:17px;height:17px;border:1px solid #888;border-radius:2px}.stars{color:#f08804;font-size:20px}.small{font-size:11px;color:#565959;line-height:1.5}.range{height:5px;background:#2162a1;border-radius:3px;margin:13px 7px;position:relative}.range:before,.range:after{content:"";position:absolute;top:50%;width:18px;height:18px;border-radius:50%;background:#2162a1;transform:translateY(-50%)}.range:before{left:-3px}.range:after{right:-3px}
+.content{padding:28px 18px 45px;min-width:0}
+.brand-banner{display:grid;grid-template-columns:1.6fr 1fr;background:#f7f7f7;min-height:300px;margin-bottom:0;overflow:hidden}.brand-banner .visual{position:relative}.brand-banner .visual img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.brand-info{padding:34px 32px;display:flex;flex-direction:column;justify-content:center;background:#f5f2ed}.polene{font:700 43px Georgia,serif;letter-spacing:.1em}.brand-info h2{font-size:22px;margin:10px 0 5px}.brand-info p{font-size:13px;color:#565959;line-height:1.5}.sponsored{font-size:11px;color:#666;margin-top:12px}.minirow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:#fff;padding:12px 0 18px}.mini{border:1px solid #ddd;background:#fff;padding:10px;display:grid;grid-template-columns:76px 1fr;gap:8px;align-items:center;min-height:92px}.mini img{width:76px;height:70px;object-fit:contain;background:#fafafa}.mini strong{font-size:12px}.mini span{font-size:11px;color:#565959;display:block;margin-top:4px}
+.results-head h2{font-size:23px;margin:0 0 5px}.results-head p{font-size:13px;color:#565959;margin:0 0 12px}.results-head a{color:var(--blue);text-decoration:underline}
+.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.product{padding:0 0 18px;min-width:0}.photo{height:330px;background:#f7f7f7;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.photo img{width:100%;height:100%;object-fit:contain;padding:12px;transition:transform .25s}.product:hover .photo img{transform:scale(1.03)}.badge{position:absolute;left:8px;top:8px;background:#cc0c39;color:#fff;font-size:10px;padding:5px 7px}.pbody{padding:10px 5px}.pbody h3{font-size:15px;font-weight:400;line-height:1.38;margin:0 0 5px;min-height:42px}.pbody h3:hover{color:#c45500}.rating{color:#f08804;font-size:17px}.rating span{font-size:11px;color:var(--blue);margin-left:5px}.price{font-size:27px;margin:6px 0}.price sup{font-size:12px;vertical-align:top}.prime{font-weight:700;color:#00a8e1;font-size:12px}.delivery{font-size:11px;line-height:1.45;margin:6px 0 10px}.add{background:#ffd814;border:1px solid #fcd200;border-radius:18px;padding:8px 14px;font-size:12px}.add:hover{background:#f7ca00}
+.case{border-top:1px solid #ddd;margin-top:28px;padding-top:25px}.case h2{font-size:22px}.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.case-card{border:1px solid #ddd;padding:17px;background:#fafafa}.case-card strong{font-size:13px}.case-card p{font-size:12px;color:#565959;line-height:1.55}
+.back{display:block;background:#37475a;color:#fff;text-align:center;padding:14px;font-size:12px}.foot{background:#232f3e;color:#ddd;display:grid;grid-template-columns:1fr 1fr;gap:35px;padding:35px 7vw;font-size:12px;line-height:1.65}.foot strong{color:#fff}.foot2{background:#131a22;color:#aaa;text-align:center;padding:18px;font-size:10px}
+.overlay{position:fixed;inset:0;background:#0008;z-index:50;display:none}.overlay.on{display:block}.drawer{position:fixed;right:0;top:0;height:100vh;width:min(460px,100vw);background:#fff;z-index:51;transform:translateX(105%);transition:.28s;display:flex;flex-direction:column;box-shadow:-10px 0 28px #0004}.drawer.on{transform:translateX(0)}.dhead{background:#f0f2f2;padding:19px;display:flex;justify-content:space-between}.dhead button{border:0;background:none;font-size:25px}.ditems{padding:17px;overflow:auto;flex:1}.ci{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #ddd;padding:12px 0;font-size:12px}.ci button{border:0;background:none;color:var(--blue);padding:4px 0}.dbottom{border-top:1px solid #ddd;padding:18px}.checkout{width:100%;border:1px solid #fcd200;background:#ffd814;border-radius:18px;padding:10px;margin-top:12px}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,90px);opacity:0;background:#fff;border:1px solid #888;padding:13px 18px;z-index:60;box-shadow:0 3px 14px #0003;transition:.25s}.toast.on{opacity:1;transform:translate(-50%,0)}
+.mobilefilter{display:none}
+@media(max-width:1100px){.header{grid-template-columns:auto 1fr auto auto}.loc,.lang,.orders{display:none}.search{grid-column:2/3}.products{grid-template-columns:repeat(3,1fr)}.minirow{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.academic{font-size:9px}.header{grid-template-columns:auto 1fr auto;padding:7px 9px}.account{display:none}.amz{font-size:24px}.search{grid-column:1/-1;grid-row:2}.nav1,.nav2{padding-left:10px;gap:16px}.results-top{padding:11px 10px;font-size:12px}.layout{display:block}.sidebar{display:none}.content{padding:12px 9px 28px}.mobilefilter{display:inline-block;border:1px solid #aaa;border-radius:8px;background:#fff;padding:7px 10px;margin-bottom:10px;font-size:12px}.brand-banner{grid-template-columns:1fr;min-height:0}.brand-banner .visual{height:240px}.brand-banner .visual img{position:relative}.brand-info{padding:24px}.polene{font-size:35px}.minirow{grid-template-columns:1fr 1fr}.mini{grid-template-columns:55px 1fr}.mini img{width:55px;height:55px}.products{grid-template-columns:repeat(2,1fr);gap:9px}.photo{height:210px}.pbody h3{font-size:13px}.price{font-size:22px}.case-grid{grid-template-columns:1fr}.foot{grid-template-columns:1fr}.sort{display:none}}
+@media(max-width:420px){.minirow{grid-template-columns:1fr}.photo{height:180px}}
 </style>
 </head>
 <body>
-<div class="disclaimer">CONCEPT ACADÉMIQUE NON OFFICIEL · KEDGE BUSINESS SCHOOL · AUCUNE AFFILIATION AVEC AMAZON OU POLÈNE · ACHATS DÉSACTIVÉS</div>
-<header class="amazon-header">
-  <a class="brand" href="#">amazon<span class="smile">⌣</span><span class="fr">.fr</span></a>
-  <div class="headbox location"><small>Livrer en</small><strong>🇫🇷 France</strong></div>
-  <div class="searchbar"><select aria-label="Catégorie"><option>Tout</option><option>Mode</option><option>Sacs</option><option>Bijoux</option></select><input id="topSearch" placeholder="Rechercher Amazon.fr — concept Polène" aria-label="Rechercher"><button onclick="syncSearch()" aria-label="Rechercher">⌕</button></div>
-  <div class="headbox lang"><small>Langue</small><strong>FR ▾</strong></div>
-  <div class="headbox account"><small>Bonjour, identifiez-vous</small><strong>Compte et listes ▾</strong></div>
-  <div class="headbox orders"><small>Retours</small><strong>et commandes</strong></div>
-  <button class="cartbtn" onclick="toggleCart(true)">🛒 Panier <span class="cartcount" id="cart-count">0</span></button>
+<div class="academic">UNOFFICIAL ACADEMIC PROTOTYPE · KEDGE BUSINESS SCHOOL · NOT AFFILIATED WITH AMAZON OR POLÈNE · NO REAL PURCHASES</div>
+
+<header class="header">
+  <a class="amz" href="#"><span>amazon<span class="dot">.fr</span></span><i class="smile"></i></a>
+  <div class="loc"><small>Livraison à</small><strong>France · Modifier</strong></div>
+  <div class="search">
+    <select aria-label="Catégorie"><option>Tout</option><option>Mode</option><option>Sacs</option><option>Bijoux</option></select>
+    <input id="topSearch" value="polène" aria-label="Rechercher sur Amazon.fr">
+    <button onclick="searchFromTop()" aria-label="Rechercher">⌕</button>
+  </div>
+  <div class="hbox lang"><small>🇫🇷 FR</small><strong>Langue ▾</strong></div>
+  <div class="hbox account"><small>Bonjour, identifiez-vous</small><strong>Compte et listes ▾</strong></div>
+  <div class="hbox orders"><small>Retours</small><strong>et commandes</strong></div>
+  <button class="cart" onclick="cartToggle(true)">🛒 <b id="cartCount">0</b> Panier</button>
 </header>
-<nav class="subnav">
-  <a href="#collection"><strong>☰ Toutes</strong></a><a href="#collection">Mode</a><a href="#collection">Sacs à main</a><a href="#collection">Petite maroquinerie</a><a href="#collection">Bijoux</a><a class="polene-link" href="#polene">Boutique Polène — concept</a><a href="#case-study">Étude de cas</a>
+
+<nav class="nav1">
+  <a href="#"><strong>☰ Toutes</strong></a><a href="#">Prime ▾</a><a href="#">Cartes cadeaux</a><a href="#">Nos offres</a><a href="#">Listes d'envies</a><a href="#">PC & Jeux vidéo</a><a href="#">Nouveautés</a><a href="#">Meilleures ventes</a><a href="#">Prime Video</a><a href="#">Musique</a><a href="#">Service Client</a><a href="#">Premium Brands</a><a href="#">Mode</a>
+</nav>
+<nav class="nav2">
+  <a href="#"><strong>Amazon.fr</strong></a><a href="#">Nos offres ▾</a><a href="#">Outlet</a><a href="#">Bestsellers ▾</a><a href="#">Amazon Seconde main</a><a href="#">Amazon Services ▾</a>
 </nav>
 
-<section class="hero" id="polene">
-  <div class="hero-copy">
-    <div class="sponsored">Boutique de marque conceptuelle · Contenu académique</div>
-    <h1>Polène sur Amazon.fr</h1>
-    <p>Une proposition de boutique premium qui associe l'univers sculptural de Polène à la simplicité de découverte d'Amazon.fr, tout en conservant une présentation maîtrisée de la marque.</p>
-    <button class="shop" onclick="document.getElementById('collection').scrollIntoView()">Découvrir la collection</button>
+<div class="results-top">
+  <strong>1-6 sur 6 résultats pour <em>"polène"</em></strong>
+  <button class="sort">Trier par : Sélectionnés ▾</button>
+</div>
+
+<div class="layout">
+<aside class="sidebar">
+  <div class="filter-block"><h3>Éligible à la livraison gratuite</h3><div class="check"><span class="box"></span> Livraison gratuite</div><p class="small">Livraison gratuite sur les commandes éligibles — simulation académique.</p></div>
+  <div class="filter-block"><h3>Catégories</h3><div class="check"><span class="box"></span> Sacs</div><div class="check"><span class="box"></span> Petite maroquinerie</div><div class="check"><span class="box"></span> Bijoux</div></div>
+  <div class="filter-block"><h3>Avis client</h3><div class="stars">★★★★☆ <span class="small">& plus</span></div></div>
+  <div class="filter-block"><h3>Marques</h3><div class="check"><span class="box"></span> POLÈNE</div></div>
+  <div class="filter-block"><h3>Prix</h3><strong>110 € – 480 €</strong><div class="range"></div><p class="small">Moins de 200 €<br>200 € à 400 €<br>Plus de 400 €</p></div>
+  <div class="filter-block"><h3>Couleur</h3><div class="check"><span class="box" style="background:#111"></span> Noir</div><div class="check"><span class="box" style="background:#b87842"></span> Camel</div><div class="check"><span class="box" style="background:#c8a96b"></span> Doré</div></div>
+</aside>
+
+<main class="content">
+  <button class="mobilefilter">☰ Filtres</button>
+
+  <section class="brand-banner">
+    <div class="visual"><img src="https://www.polene-paris.com/cdn/shop/files/01_Visuel_Mega_Menu_2026.jpg?v=1783586333&width=1920" alt="Visuel officiel Polène"></div>
+    <div class="brand-info">
+      <div class="polene">POLÈNE</div>
+      <h2>Lignes sculpturales. Élégance parisienne.</h2>
+      <p>Découvrez notre concept de boutique Polène sur Amazon.fr, avec une sélection de sacs, petite maroquinerie et bijoux présentée dans une expérience marketplace familière.</p>
+      <div class="sponsored">Sponsorisé · prototype académique non commercial</div>
+    </div>
+  </section>
+
+  <div class="minirow">
+    <div class="mini"><img src="https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-dix-noir-lisse.png?v=1682503348&width=700" alt="Numéro Dix"><div><strong>Best seller</strong><span>Numéro Dix</span></div></div>
+    <div class="mini"><img src="https://www.polene-paris.com/cdn/shop/files/packshot-front_cyme-cognac-grain_e03da690-017b-44ef-a822-1abaf80f0c08.png?v=1728979982&width=700" alt="Cyme"><div><strong>Nouveauté</strong><span>Cyme</span></div></div>
+    <div class="mini"><img src="https://www.polene-paris.com/cdn/shop/files/packshot-front_porte-carte-neiti-camel_bfdd284d-7695-44f8-8a27-72f145dba5a1.png?v=1689085415&width=700" alt="Porte-cartes Neiti"><div><strong>Petite maroquinerie</strong><span>Neiti</span></div></div>
+    <div class="mini"><img src="https://www.polene-paris.com/cdn/shop/files/packshot-front_boucles_creoles_eole_f5757467-2665-4d80-aacc-6c902e62a487.png?v=1730111992&width=700" alt="Créoles Éole"><div><strong>Bijoux</strong><span>Éole</span></div></div>
   </div>
-  <div class="hero-img"><img src="https://www.polene-paris.com/cdn/shop/files/01_Visuel_Mega_Menu_2026.jpg?v=1783586333&width=1920" alt="Visuel officiel Polène"><span class="credit">Visuel Polène · utilisé pour ce concept académique</span></div>
-</section>
 
-<main class="page">
-  <section class="brandbar">
-    <div><div class="polene-logo">POLÈNE</div><p>Design parisien · Maroquinerie et bijoux · Boutique Amazon.fr proposée</p></div>
-    <div class="academic-pill">Prototype étudiant · non commercial</div>
+  <section class="results-head">
+    <h2>Résultats</h2>
+    <p><a href="#case">En savoir plus sur ces résultats.</a> Prix, disponibilité, avis, Prime et livraison sont présentés uniquement pour cette démonstration académique.</p>
   </section>
 
-  <section class="section" id="collection">
-    <div class="section-title"><div><h2>Les essentiels Polène</h2><p>Images officielles Polène · prix de référence affichés pour le prototype</p></div><p>6 résultats</p></div>
-    <div class="filters">
-      <button class="chip active" data-filter="all">Tous les produits</button>
-      <button class="chip" data-filter="bags">Sacs</button>
-      <button class="chip" data-filter="leather">Petite maroquinerie</button>
-      <button class="chip" data-filter="jewelry">Bijoux</button>
-      <input class="collection-search" id="search" placeholder="Rechercher dans Polène…" aria-label="Rechercher dans la collection">
-    </div>
-    <div class="products" id="products"></div>
-  </section>
+  <section class="products" id="products"></section>
 
-  <section class="a-plus">
-    <img src="https://www.polene-paris.com/cdn/shop/files/01_Visuel_Mega_Menu_20266.jpg?v=1783586335&width=1920" alt="Visuel de campagne Polène">
-    <div class="a-copy">
-      <div class="kicker">Contenu A+ · concept de marque</div>
-      <h2>Le design Polène, dans une expérience Amazon.fr</h2>
-      <p>Le concept conserve un univers visuel premium, des images produit détaillées et une narration de marque forte, tout en ajoutant les repères familiers d'Amazon.fr : recherche, catégories, avis simulés, livraison et panier de démonstration.</p>
-      <p><strong>Principe stratégique :</strong> proposer un modèle Seller exploité par la marque afin de préserver davantage le contrôle sur l'assortiment, les contenus et le positionnement.</p>
-      <a class="learn" href="#case-study">Voir la logique de l'étude de cas ›</a>
-    </div>
-  </section>
-
-  <section class="case" id="case-study">
-    <h2>Pourquoi ce concept fonctionne pour notre étude de cas</h2>
-    <div class="cards">
-      <div class="card"><h3>01 · Cible</h3><p>Femmes principalement âgées de 25 à 40 ans, professionnelles urbaines et digitalement actives, à la recherche d'un sac premium distinctif.</p></div>
-      <div class="card"><h3>02 · Positionnement</h3><p>Le design sculptural et l'identité parisienne de Polène restent au centre, sans transformer la marque en produit promotionnel de masse.</p></div>
-      <div class="card"><h3>03 · Seller contrôlé</h3><p>Un compte vendeur exploité par la marque est proposé afin de mieux contrôler les fiches, l'assortiment, le contenu et la présentation.</p></div>
-      <div class="card"><h3>04 · Visibilité</h3><p>La recherche Amazon.fr, les catégories Mode et une boutique de marque peuvent améliorer la découverte auprès de nouveaux clients.</p></div>
-      <div class="card"><h3>05 · Expérience</h3><p>Informations claires, comparaison rapide et signaux de livraison réduisent les frictions tout en conservant une présentation premium.</p></div>
-      <div class="card"><h3>06 · Protection de marque</h3><p>Dans un lancement réel, l'autorisation de Polène, des contenus authentiques, une distribution maîtrisée et une cohérence de prix seraient indispensables.</p></div>
+  <section class="case" id="case">
+    <h2>Logique de l'étude de cas</h2>
+    <div class="case-grid">
+      <div class="case-card"><strong>Cible</strong><p>Professionnelles urbaines, principalement âgées de 25 à 40 ans, à la recherche d'accessoires premium distinctifs.</p></div>
+      <div class="case-card"><strong>Différenciation</strong><p>Silhouettes sculpturales, identité parisienne, design reconnaissable et approche premium sans dépendre des promotions.</p></div>
+      <div class="case-card"><strong>Modèle Seller proposé</strong><p>Un compte vendeur contrôlé par la marque pour mieux maîtriser les fiches, l'assortiment et la présentation.</p></div>
     </div>
   </section>
 </main>
+</div>
 
-<a class="backtop" href="#">Retour en haut</a>
-<footer class="footer">
-  <div><strong>Amazon.fr × Polène — Concept académique</strong><br>Prototype indépendant réalisé pour une étude de cas KEDGE Business School. Il ne représente pas une boutique Amazon ou Polène réelle.</div>
-  <div><strong>Important</strong><br>Aucun paiement, commande ou compte client réel n'est traité. Les notes, avis, mentions Prime et informations de livraison affichés sont uniquement des éléments de démonstration.</div>
-</footer>
-<div class="footer-note">Amazon et Polène sont les marques de leurs propriétaires respectifs. Ce site est un prototype étudiant non officiel.</div>
+<a class="back" href="#">Retour en haut</a>
+<footer class="foot"><div><strong>Amazon.fr × Polène — concept académique</strong><br>Prototype indépendant réalisé pour un projet KEDGE Business School. Il ne représente pas une boutique Amazon ou Polène réelle.</div><div><strong>Important</strong><br>Aucun compte, paiement ou commande n'est traité. Les avis, badges, Prime, prix et informations de livraison sont uniquement des éléments de démonstration.</div></footer>
+<div class="foot2">Amazon et Polène sont les marques de leurs propriétaires respectifs. Prototype étudiant non officiel.</div>
 
-<div class="overlay" id="overlay" onclick="toggleCart(false)"></div>
-<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Panier de démonstration">
-  <div class="drawer-head"><strong>Votre panier · Démo</strong><button class="close" onclick="toggleCart(false)">×</button></div>
-  <div class="drawer-items" id="cart-items"></div>
-  <div class="drawer-bottom"><div style="display:flex;justify-content:space-between;margin-bottom:15px"><strong>Sous-total démo</strong><strong id="total">0,00 €</strong></div><button class="checkout" onclick="notify('Prototype académique : le paiement est désactivé.')">Passer la commande — démo</button></div>
+<div class="overlay" id="overlay" onclick="cartToggle(false)"></div>
+<aside class="drawer" id="drawer">
+  <div class="dhead"><strong>Votre panier · Démo</strong><button onclick="cartToggle(false)">×</button></div>
+  <div class="ditems" id="cartItems"></div>
+  <div class="dbottom"><div style="display:flex;justify-content:space-between"><strong>Sous-total</strong><strong id="total">0,00 €</strong></div><button class="checkout" onclick="notify('Paiement désactivé : prototype académique.')">Passer la commande — démo</button></div>
 </aside>
-<div class="toast" id="toast" role="status"></div>
+<div class="toast" id="toast"></div>
 
 <script>
 const products=[
-{id:1,name:'Polène Numéro Dix — Noir Lisse',category:'bags',description:'Sac porté épaule · cuir lisse · visuel officiel Polène',price:480,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-dix-noir-lisse.png?v=1682503348&width=1920'},
-{id:2,name:'Polène Cyme — Cognac Grainé',category:'bags',description:'Cabas · cuir grainé · visuel officiel Polène',price:440,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_cyme-cognac-grain_e03da690-017b-44ef-a822-1abaf80f0c08.png?v=1728979982&width=1920'},
-{id:3,name:'Polène Numéro Neuf Mini — Noir',category:'bags',description:'Mini sac · cuir grainé · visuel officiel Polène',price:390,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-neuf-mini-noir-grain.png?v=1682504822&width=1920'},
-{id:4,name:'Polène Porte-cartes Neiti — Camel',category:'leather',description:'Petite maroquinerie · édition Duo Camel',price:110,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_porte-carte-neiti-camel_bfdd284d-7695-44f8-8a27-72f145dba5a1.png?v=1689085415&width=1920'},
-{id:5,name:'Polène Jonc Ormé — Or & Camel',category:'jewelry',description:'Bijou · cuir camel et finition dorée',price:220,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_jonc-orme-or-cuir-camel.png?v=1762953637&width=1920'},
-{id:6,name:'Polène Créoles Éole',category:'jewelry',description:'Bijou · finition dorée 24 carats',price:180,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_boucles_creoles_eole_f5757467-2665-4d80-aacc-6c902e62a487.png?v=1730111992&width=1920'}
+{id:1,name:'POLÈNE Numéro Dix — Edition Noir Lisse, sac porté épaule en cuir',cat:'bags',price:480,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-dix-noir-lisse.png?v=1682503348&width=1920',reviews:'128'},
+{id:2,name:'POLÈNE Cyme — Edition Cognac Grainé, cabas en cuir',cat:'bags',price:440,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_cyme-cognac-grain_e03da690-017b-44ef-a822-1abaf80f0c08.png?v=1728979982&width=1920',reviews:'94'},
+{id:3,name:'POLÈNE Numéro Neuf Mini — Edition Noir Grainé, mini sac',cat:'bags',price:390,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-neuf-mini-noir-grain.png?v=1682504822&width=1920',reviews:'77'},
+{id:4,name:'POLÈNE Porte-cartes Neiti — Edition Duo Camel',cat:'leather',price:110,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_porte-carte-neiti-camel_bfdd284d-7695-44f8-8a27-72f145dba5a1.png?v=1689085415&width=1920',reviews:'41'},
+{id:5,name:'POLÈNE Jonc Ormé — Edition Or & Cuir Camel',cat:'jewelry',price:220,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_jonc-orme-or-cuir-camel.png?v=1762953637&width=1920',reviews:'36'},
+{id:6,name:'POLÈNE Créoles Éole — finition dorée 24 carats',cat:'jewelry',price:180,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_boucles_creoles_eole_f5757467-2665-4d80-aacc-6c902e62a487.png?v=1730111992&width=1920',reviews:'52'}
 ];
-let filter='all',cart=[];
+let cart=[];
 const euro=n=>n.toLocaleString('fr-FR',{style:'currency',currency:'EUR'});
-function render(){
-  const q=document.getElementById('search').value.toLowerCase();
-  const visible=products.filter(p=>(filter==='all'||p.category===filter)&&p.name.toLowerCase().includes(q));
-  document.getElementById('products').innerHTML=visible.map(p=>`
-  <article class="product">
-    <div class="product-img"><img loading="lazy" src="${p.img}" alt="${p.name}"><span class="badge">Boutique concept</span></div>
-    <h3>${p.name}</h3>
-    <div class="desc">${p.description}</div>
-    <div class="rating">★★★★☆ <span>avis démo</span></div>
-    <div class="price"><sup>€</sup>${Math.floor(p.price)}<sup>00</sup></div>
-    <div class="prime">✓ prime <span style="color:#565959;font-weight:400">· simulation</span></div>
-    <div class="delivery"><strong>Livraison GRATUITE</strong> — démonstration<br><span style="color:#565959">Aucune commande réelle</span></div>
-    <button onclick="add(${p.id})">Ajouter au panier démo</button>
-  </article>`).join('')||'<p>Aucun produit correspondant.</p>';
+function render(list=products){
+ document.getElementById('products').innerHTML=list.map(p=>`
+ <article class="product">
+   <div class="photo"><img loading="lazy" src="${p.img}" alt="${p.name}"><span class="badge">Boutique concept</span></div>
+   <div class="pbody">
+     <h3>${p.name}</h3>
+     <div class="rating">★★★★☆ <span>${p.reviews}</span></div>
+     <div class="price"><sup>€</sup>${Math.floor(p.price)}<sup>00</sup></div>
+     <div class="prime">✓ prime <span style="color:#565959;font-weight:400">simulation</span></div>
+     <div class="delivery"><strong>Livraison GRATUITE</strong><br>Prototype — aucune commande réelle</div>
+     <button class="add" onclick="add(${p.id})">Ajouter au panier</button>
+   </div>
+ </article>`).join('');
 }
-function syncSearch(){document.getElementById('search').value=document.getElementById('topSearch').value;document.getElementById('collection').scrollIntoView();render()}
+function searchFromTop(){const q=document.getElementById('topSearch').value.trim().toLowerCase();const list=!q||q==='polène'||q==='polene'?products:products.filter(p=>p.name.toLowerCase().includes(q));render(list);document.querySelector('.results-head').scrollIntoView()}
 function add(id){cart.push(id);updateCart();notify('Ajouté au panier de démonstration')}
-function updateCart(){
-  document.getElementById('cart-count').textContent=cart.length;
-  document.getElementById('cart-items').innerHTML=cart.length?cart.map((id,i)=>{const p=products.find(x=>x.id===id);return `<div class="cart-item"><div><strong>${p.name}</strong><div style="font-size:12px;color:#565959;margin-top:5px">Prototype académique</div></div><div style="text-align:right"><strong>${euro(p.price)}</strong><br><button class="remove" onclick="removeItem(${i})">Supprimer</button></div></div>`}).join(''):'<p>Votre panier de démonstration est vide.</p>';
-  document.getElementById('total').textContent=euro(cart.reduce((n,id)=>n+products.find(p=>p.id===id).price,0));
-}
+function updateCart(){document.getElementById('cartCount').textContent=cart.length;document.getElementById('cartItems').innerHTML=cart.length?cart.map((id,i)=>{const p=products.find(x=>x.id===id);return `<div class="ci"><div><strong>${p.name}</strong><br><button onclick="removeItem(${i})">Supprimer</button></div><strong>${euro(p.price)}</strong></div>`}).join(''):'<p>Votre panier est vide.</p>';document.getElementById('total').textContent=euro(cart.reduce((s,id)=>s+products.find(p=>p.id===id).price,0))}
 function removeItem(i){cart.splice(i,1);updateCart()}
-function toggleCart(open){document.getElementById('drawer').classList.toggle('show',open);document.getElementById('overlay').classList.toggle('show',open)}
-let toastTimer;function notify(t){const e=document.getElementById('toast');e.textContent=t;e.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>e.classList.remove('show'),2400)}
-document.querySelectorAll('.chip[data-filter]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.chip[data-filter]').forEach(x=>x.classList.remove('active'));b.classList.add('active');filter=b.dataset.filter;render()}));
-document.getElementById('search').addEventListener('input',render);
-document.getElementById('topSearch').addEventListener('keydown',e=>{if(e.key==='Enter')syncSearch()});
+function cartToggle(open){document.getElementById('overlay').classList.toggle('on',open);document.getElementById('drawer').classList.toggle('on',open)}
+let t;function notify(msg){const e=document.getElementById('toast');e.textContent=msg;e.classList.add('on');clearTimeout(t);t=setTimeout(()=>e.classList.remove('on'),2300)}
+document.getElementById('topSearch').addEventListener('keydown',e=>{if(e.key==='Enter')searchFromTop()});
 render();updateCart();
 </script>
-</body></html>
+</body>
+</html>
