@@ -31,13 +31,15 @@
 .strategy-hero{background:linear-gradient(135deg,#f7f7f7,#eef3f7);border:1px solid #ddd;padding:28px;margin-bottom:18px}
 .strategy-kicker{font-size:11px;color:#565959;text-transform:uppercase;letter-spacing:.12em;font-weight:700}
 .strategy h2{font-size:26px;margin:7px 0 9px}.strategy h3{font-size:17px;margin:0 0 8px}.strategy p{font-size:13px;line-height:1.65;color:#3f3f3f}
-.strategy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:16px 0}.strategy-card{border:1px solid #ddd;background:#fff;padding:18px}.strategy-card ul{padding-left:18px;margin:8px 0}.strategy-card li{font-size:12px;line-height:1.55;margin:5px 0}
-.admock{border:1px solid #dadce0;border-radius:8px;padding:18px;background:#fff;max-width:760px;margin:16px 0}.adurl{font-size:12px;color:#202124}.adtitle{font-size:20px;color:#1a0dab;margin:5px 0}.addesc{font-size:13px;color:#4d5156;line-height:1.5}
-.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}.feature{border:1px solid #ddd;border-radius:5px;padding:16px;background:#fafafa}.feature b{display:block;font-size:13px;margin-bottom:5px}.feature span{font-size:12px;color:#565959;line-height:1.5}
-.compare{width:100%;border-collapse:collapse;margin:16px 0;font-size:12px}.compare th,.compare td{border:1px solid #ddd;padding:10px;text-align:left}.compare th{background:#f3f3f3}
-.journey{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:16px 0}.step{background:#232f3e;color:#fff;padding:9px 12px;border-radius:4px;font-size:11px}.arrow{color:#777;font-weight:700}
-.kpis{display:flex;gap:8px;flex-wrap:wrap}.kpi{border:1px solid #bbb;border-radius:18px;padding:7px 11px;font-size:11px;background:#fff}
-@media(max-width:900px){.strategy-grid{grid-template-columns:1fr}.feature-grid{grid-template-columns:1fr}}
+
+.view360{margin-top:8px;width:100%;border:1px solid #888c8c;background:#fff;border-radius:18px;padding:8px 12px;font-size:12px;color:#0f1111}.view360:hover{background:#f3f3f3}
+.viewer360{position:fixed;inset:0;background:#0009;z-index:70;display:none;align-items:center;justify-content:center;padding:20px}.viewer360.on{display:flex}
+.viewer-card{width:min(760px,96vw);background:#fff;border-radius:10px;box-shadow:0 10px 40px #0005;overflow:hidden}
+.viewer-head{display:flex;align-items:center;justify-content:space-between;padding:15px 18px;border-bottom:1px solid #ddd}.viewer-head strong{font-size:15px}.viewer-head button{border:0;background:none;font-size:26px}
+.viewer-stage{height:min(560px,65vh);background:#f7f7f7;display:flex;align-items:center;justify-content:center;perspective:1200px;overflow:hidden;cursor:grab;touch-action:none;user-select:none}
+.viewer-stage:active{cursor:grabbing}.viewer-stage img{max-width:78%;max-height:78%;object-fit:contain;transform-style:preserve-3d;transition:transform .08s linear;pointer-events:none}
+.viewer-controls{padding:14px 18px 18px}.viewer-controls input{width:100%}.viewer-help{text-align:center;font-size:11px;color:#565959;margin-top:6px}
+@media(max-width:900px){.feature-grid{grid-template-columns:1fr}}
 @media(max-width:1100px){.header{grid-template-columns:auto 1fr auto auto}.loc,.lang,.orders{display:none}.search{grid-column:2/3}.products{grid-template-columns:repeat(3,1fr)}.minirow{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.academic{font-size:9px}.header{grid-template-columns:auto 1fr auto;padding:7px 9px}.account{display:none}.amz{font-size:24px}.search{grid-column:1/-1;grid-row:2}.nav1,.nav2{padding-left:10px;gap:16px}.results-top{padding:11px 10px;font-size:12px}.layout{display:block}.sidebar{display:none}.content{padding:12px 9px 28px}.mobilefilter{display:inline-block;border:1px solid #aaa;border-radius:8px;background:#fff;padding:7px 10px;margin-bottom:10px;font-size:12px}.brand-banner{grid-template-columns:1fr;min-height:0}.brand-banner .visual{height:240px}.brand-banner .visual img{position:relative}.brand-info{padding:24px}.polene{font-size:35px}.minirow{grid-template-columns:1fr 1fr}.mini{grid-template-columns:55px 1fr}.mini img{width:55px;height:55px}.products{grid-template-columns:repeat(2,1fr);gap:9px}.photo{height:210px}.pbody h3{font-size:13px}.price{font-size:22px}.case-grid{grid-template-columns:1fr}.foot{grid-template-columns:1fr}.sort{display:none}}
 @media(max-width:420px){.minirow{grid-template-columns:1fr}.photo{height:180px}}
@@ -61,10 +63,10 @@
 </header>
 
 <nav class="nav1">
-  <a href="#"><strong>☰ All</strong></a><a href="#">Prime ▾</a><a href="#">Gift Cards</a><a href="#">Our Deals</a><a href="#">Wish Lists</a><a href="#">PC & Video Games</a><a href="#">New Releases</a><a href="#">Best Sellers</a><a href="#">Prime Video</a><a href="#">Music</a><a href="#">Customer Service</a><a href="#">Premium Brands</a><a href="#products">Handbags</a><a href="#sea">Google SEA</a><a href="#ecommerce">eCommerce Strategy</a>
+  <a href="#"><strong>☰ All</strong></a><a href="#">Prime ▾</a><a href="#">Gift Cards</a><a href="#">Our Deals</a><a href="#">Wish Lists</a><a href="#">PC & Video Games</a><a href="#">New Releases</a><a href="#">Best Sellers</a><a href="#">Prime Video</a><a href="#">Music</a><a href="#">Customer Service</a><a href="#">Premium Brands</a><a href="#products">Handbags</a><a href="#ecommerce">eCommerce Strategy</a>
 </nav>
 <nav class="nav2">
-  <a href="#"><strong>Amazon.fr</strong></a><a href="#products">Polène Bags</a><a href="#sea">Google SEA Strategy</a><a href="#ecommerce">Shopify Plus Strategy</a><a href="#case">Case Study Logic</a>
+  <a href="#"><strong>Amazon.fr</strong></a><a href="#products">Polène Bags</a><a href="#ecommerce">Shopify Plus Strategy</a><a href="#case">Case Study Logic</a>
 </nav>
 
 <div class="results-top">
@@ -108,47 +110,6 @@
   </section>
 
   <section class="products" id="products"></section>
-
-
-  <section class="strategy" id="sea">
-    <div class="strategy-hero">
-      <div class="strategy-kicker">P3 · Search Engine Advertising</div>
-      <h2>Google SEA Strategy</h2>
-      <p><strong>Objective:</strong> capture high-intent customers searching for Polène or premium leather handbags, protect branded search visibility, and drive qualified traffic toward the proposed Polène Amazon.fr experience and official eCommerce ecosystem.</p>
-    </div>
-
-    <div class="strategy-grid">
-      <div class="strategy-card">
-        <h3>1 · Brand Protection</h3>
-        <p>Capture customers already searching for the brand.</p>
-        <ul><li>Polène</li><li>Polène Paris</li><li>Polène Numéro Dix</li><li>Polène Cyme</li></ul>
-        <p><strong>Goal:</strong> dominate branded search visibility and reduce the impact of resellers, counterfeit and dupe websites.</p>
-      </div>
-      <div class="strategy-card">
-        <h3>2 · Generic Acquisition</h3>
-        <p>Reach new customers who want a premium handbag but may not yet know Polène.</p>
-        <ul><li>Affordable luxury handbag</li><li>Premium French leather bag</li><li>Women's leather shoulder bag</li><li>Sculptural designer handbag</li></ul>
-        <p><strong>Goal:</strong> acquire new qualified prospects.</p>
-      </div>
-      <div class="strategy-card">
-        <h3>3 · Shopping / Performance Max</h3>
-        <p>Use Polène's premium product photography to feature flagship bags such as Numéro Dix, Cyme and Numéro Neuf in Shopping and visual placements.</p>
-        <p><strong>Goal:</strong> combine product imagery, price and availability with strong purchase intent.</p>
-      </div>
-    </div>
-
-    <div class="admock">
-      <div class="adurl">Sponsored · polene-paris.com</div>
-      <div class="adtitle">Official Polène Paris Website | Discover the Collection</div>
-      <div class="addesc">Contemporary leather goods designed in Paris and crafted in Spain. Discover iconic Polène bags including Numéro Dix, Cyme and Numéro Neuf.</div>
-    </div>
-
-    <div class="strategy-card">
-      <h3>Geographic & Audience Targeting</h3>
-      <p><strong>Priority markets:</strong> France, Spain, Italy, UK and USA, supported by localized campaigns. Use remarketing to re-engage visitors who explored products but did not purchase, with a mobile-first approach for digitally active urban professionals.</p>
-      <div class="kpis"><span class="kpi">CTR</span><span class="kpi">CPC</span><span class="kpi">Conversion Rate</span><span class="kpi">CPA</span><span class="kpi">ROAS</span><span class="kpi">Add-to-Basket Rate</span></div>
-    </div>
-  </section>
 
   <section class="strategy" id="ecommerce">
     <div class="strategy-hero">
@@ -220,6 +181,18 @@
   <div class="ditems" id="cartItems"></div>
   <div class="dbottom"><div style="display:flex;justify-content:space-between"><strong>Subtotal</strong><strong id="total">0,00 €</strong></div><button class="checkout" onclick="notify('Checkout disabled: academic prototype.')">Proceed to Checkout — Demo</button></div>
 </aside>
+<div class="viewer360" id="viewer360" onclick="if(event.target===this)close360()">
+  <div class="viewer-card">
+    <div class="viewer-head"><strong id="viewerTitle">360° Product View</strong><button onclick="close360()" aria-label="Close">×</button></div>
+    <div class="viewer-stage" id="viewerStage">
+      <img id="viewerImg" src="" alt="Interactive 360 degree product preview">
+    </div>
+    <div class="viewer-controls">
+      <input id="viewerRange" type="range" min="0" max="360" value="0" aria-label="Rotate product">
+      <div class="viewer-help">Drag the product or use the slider to rotate the 360° preview.</div>
+    </div>
+  </div>
+</div>
 <div class="toast" id="toast"></div>
 
 <script>
@@ -245,8 +218,8 @@ function render(list=products){
      <div class="rating">★★★★☆ <span>Demo reviews</span></div>
      <div class="price"><sup>€</sup>${Math.floor(p.price)}<sup>00</sup></div>
      <div class="prime">✓ prime <span style="color:#565959;font-weight:400">simulation</span></div>
-     <div class="delivery"><strong>FREE Delivery</strong><br>Prototype — no real orders</div>
-     <button class="add" onclick="add(${p.id})">Add to Basket</button>
+     <div class="delivery"><strong>FREE Delivery</strong></div>
+     <button class="add" onclick="add(${p.id})">Add to Basket</button><button class="view360" onclick="open360(${p.id})">↻ 360° View</button>
    </div>
  </article>`).join('');
 }
@@ -256,6 +229,18 @@ function updateCart(){document.getElementById('cartCount').textContent=cart.leng
 function removeItem(i){cart.splice(i,1);updateCart()}
 function cartToggle(open){document.getElementById('overlay').classList.toggle('on',open);document.getElementById('drawer').classList.toggle('on',open)}
 let t;function notify(msg){const e=document.getElementById('toast');e.textContent=msg;e.classList.add('on');clearTimeout(t);t=setTimeout(()=>e.classList.remove('on'),2300)}
+
+let viewAngle=0,dragging=false,lastX=0;
+function apply360(){const img=document.getElementById('viewerImg');img.style.transform='perspective(1000px) rotateY('+viewAngle+'deg)';document.getElementById('viewerRange').value=((viewAngle%360)+360)%360}
+function open360(id){const p=products.find(x=>x.id===id);if(!p)return;document.getElementById('viewerTitle').textContent=p.name;document.getElementById('viewerImg').src=p.img;viewAngle=0;apply360();document.getElementById('viewer360').classList.add('on')}
+function close360(){document.getElementById('viewer360').classList.remove('on')}
+const vr=document.getElementById('viewerRange');vr.addEventListener('input',()=>{viewAngle=Number(vr.value);apply360()});
+const vs=document.getElementById('viewerStage');
+vs.addEventListener('pointerdown',e=>{dragging=true;lastX=e.clientX;vs.setPointerCapture(e.pointerId)});
+vs.addEventListener('pointermove',e=>{if(!dragging)return;viewAngle+=(e.clientX-lastX)*0.8;lastX=e.clientX;apply360()});
+vs.addEventListener('pointerup',()=>dragging=false);vs.addEventListener('pointercancel',()=>dragging=false);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')close360()});
+
 document.getElementById('topSearch').addEventListener('keydown',e=>{if(e.key==='Enter')searchFromTop()});
 render();updateCart();
 </script>
