@@ -26,6 +26,18 @@
 .back{display:block;background:#37475a;color:#fff;text-align:center;padding:14px;font-size:12px}.foot{background:#232f3e;color:#ddd;display:grid;grid-template-columns:1fr 1fr;gap:35px;padding:35px 7vw;font-size:12px;line-height:1.65}.foot strong{color:#fff}.foot2{background:#131a22;color:#aaa;text-align:center;padding:18px;font-size:10px}
 .overlay{position:fixed;inset:0;background:#0008;z-index:50;display:none}.overlay.on{display:block}.drawer{position:fixed;right:0;top:0;height:100vh;width:min(460px,100vw);background:#fff;z-index:51;transform:translateX(105%);transition:.28s;display:flex;flex-direction:column;box-shadow:-10px 0 28px #0004}.drawer.on{transform:translateX(0)}.dhead{background:#f0f2f2;padding:19px;display:flex;justify-content:space-between}.dhead button{border:0;background:none;font-size:25px}.ditems{padding:17px;overflow:auto;flex:1}.ci{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #ddd;padding:12px 0;font-size:12px}.ci button{border:0;background:none;color:var(--blue);padding:4px 0}.dbottom{border-top:1px solid #ddd;padding:18px}.checkout{width:100%;border:1px solid #fcd200;background:#ffd814;border-radius:18px;padding:10px;margin-top:12px}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,90px);opacity:0;background:#fff;border:1px solid #888;padding:13px 18px;z-index:60;box-shadow:0 3px 14px #0003;transition:.25s}.toast.on{opacity:1;transform:translate(-50%,0)}
 .mobilefilter{display:none}
+
+.strategy{margin-top:34px;border-top:1px solid #ddd;padding-top:30px}
+.strategy-hero{background:linear-gradient(135deg,#f7f7f7,#eef3f7);border:1px solid #ddd;padding:28px;margin-bottom:18px}
+.strategy-kicker{font-size:11px;color:#565959;text-transform:uppercase;letter-spacing:.12em;font-weight:700}
+.strategy h2{font-size:26px;margin:7px 0 9px}.strategy h3{font-size:17px;margin:0 0 8px}.strategy p{font-size:13px;line-height:1.65;color:#3f3f3f}
+.strategy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:16px 0}.strategy-card{border:1px solid #ddd;background:#fff;padding:18px}.strategy-card ul{padding-left:18px;margin:8px 0}.strategy-card li{font-size:12px;line-height:1.55;margin:5px 0}
+.admock{border:1px solid #dadce0;border-radius:8px;padding:18px;background:#fff;max-width:760px;margin:16px 0}.adurl{font-size:12px;color:#202124}.adtitle{font-size:20px;color:#1a0dab;margin:5px 0}.addesc{font-size:13px;color:#4d5156;line-height:1.5}
+.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}.feature{border:1px solid #ddd;border-radius:5px;padding:16px;background:#fafafa}.feature b{display:block;font-size:13px;margin-bottom:5px}.feature span{font-size:12px;color:#565959;line-height:1.5}
+.compare{width:100%;border-collapse:collapse;margin:16px 0;font-size:12px}.compare th,.compare td{border:1px solid #ddd;padding:10px;text-align:left}.compare th{background:#f3f3f3}
+.journey{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:16px 0}.step{background:#232f3e;color:#fff;padding:9px 12px;border-radius:4px;font-size:11px}.arrow{color:#777;font-weight:700}
+.kpis{display:flex;gap:8px;flex-wrap:wrap}.kpi{border:1px solid #bbb;border-radius:18px;padding:7px 11px;font-size:11px;background:#fff}
+@media(max-width:900px){.strategy-grid{grid-template-columns:1fr}.feature-grid{grid-template-columns:1fr}}
 @media(max-width:1100px){.header{grid-template-columns:auto 1fr auto auto}.loc,.lang,.orders{display:none}.search{grid-column:2/3}.products{grid-template-columns:repeat(3,1fr)}.minirow{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.academic{font-size:9px}.header{grid-template-columns:auto 1fr auto;padding:7px 9px}.account{display:none}.amz{font-size:24px}.search{grid-column:1/-1;grid-row:2}.nav1,.nav2{padding-left:10px;gap:16px}.results-top{padding:11px 10px;font-size:12px}.layout{display:block}.sidebar{display:none}.content{padding:12px 9px 28px}.mobilefilter{display:inline-block;border:1px solid #aaa;border-radius:8px;background:#fff;padding:7px 10px;margin-bottom:10px;font-size:12px}.brand-banner{grid-template-columns:1fr;min-height:0}.brand-banner .visual{height:240px}.brand-banner .visual img{position:relative}.brand-info{padding:24px}.polene{font-size:35px}.minirow{grid-template-columns:1fr 1fr}.mini{grid-template-columns:55px 1fr}.mini img{width:55px;height:55px}.products{grid-template-columns:repeat(2,1fr);gap:9px}.photo{height:210px}.pbody h3{font-size:13px}.price{font-size:22px}.case-grid{grid-template-columns:1fr}.foot{grid-template-columns:1fr}.sort{display:none}}
 @media(max-width:420px){.minirow{grid-template-columns:1fr}.photo{height:180px}}
@@ -38,7 +50,7 @@
   <a class="amz" href="#"><span>amazon<span class="dot">.fr</span></span><i class="smile"></i></a>
   <div class="loc"><small>Delivering to</small><strong>France · Update location</strong></div>
   <div class="search">
-    <select aria-label="Category"><option>All</option><option>Fashion</option><option>Bags</option><option>Jewelry</option></select>
+    <select aria-label="Category"><option>All</option><option>Handbags</option><option>Shoulder Bags</option><option>Tote Bags</option></select>
     <input id="topSearch" value="polène" aria-label="Search Amazon.fr">
     <button onclick="searchFromTop()" aria-label="Search">⌕</button>
   </div>
@@ -49,24 +61,24 @@
 </header>
 
 <nav class="nav1">
-  <a href="#"><strong>☰ All</strong></a><a href="#">Prime ▾</a><a href="#">Gift Cards</a><a href="#">Our Deals</a><a href="#">Wish Lists</a><a href="#">PC & Video Games</a><a href="#">New Releases</a><a href="#">Best Sellers</a><a href="#">Prime Video</a><a href="#">Music</a><a href="#">Customer Service</a><a href="#">Premium Brands</a><a href="#">Fashion</a>
+  <a href="#"><strong>☰ All</strong></a><a href="#">Prime ▾</a><a href="#">Gift Cards</a><a href="#">Our Deals</a><a href="#">Wish Lists</a><a href="#">PC & Video Games</a><a href="#">New Releases</a><a href="#">Best Sellers</a><a href="#">Prime Video</a><a href="#">Music</a><a href="#">Customer Service</a><a href="#">Premium Brands</a><a href="#products">Handbags</a><a href="#sea">Google SEA</a><a href="#ecommerce">eCommerce Strategy</a>
 </nav>
 <nav class="nav2">
-  <a href="#"><strong>Amazon.fr</strong></a><a href="#">Our Deals ▾</a><a href="#">Outlet</a><a href="#">Bestsellers ▾</a><a href="#">Amazon Resale</a><a href="#">Amazon Services ▾</a>
+  <a href="#"><strong>Amazon.fr</strong></a><a href="#products">Polène Bags</a><a href="#sea">Google SEA Strategy</a><a href="#ecommerce">Shopify Plus Strategy</a><a href="#case">Case Study Logic</a>
 </nav>
 
 <div class="results-top">
-  <strong>1-12 of 12 results for <em>"polène"</em></strong>
+  <strong>1-9 of 9 results for <em>"polène"</em></strong>
   <button class="sort">Sort by: Featured ▾</button>
 </div>
 
 <div class="layout">
 <aside class="sidebar">
   <div class="filter-block"><h3>Eligible for free delivery</h3><div class="check"><span class="box"></span> Free Delivery by Amazon</div><p class="small">Get FREE delivery on eligible orders — academic simulation.</p></div>
-  <div class="filter-block"><h3>Categories</h3><div class="check"><span class="box"></span> Bags</div><div class="check"><span class="box"></span> Small Leather Goods</div><div class="check"><span class="box"></span> Jewelry</div></div>
+  <div class="filter-block"><h3>Categories</h3><div class="check"><span class="box"></span> Handbags</div><div class="check"><span class="box"></span> Shoulder Bags</div><div class="check"><span class="box"></span> Tote Bags</div><div class="check"><span class="box"></span> Mini Bags</div></div>
   <div class="filter-block"><h3>Customer Review</h3><div class="stars">★★★★☆ <span class="small">& Up</span></div></div>
   <div class="filter-block"><h3>Brands</h3><div class="check"><span class="box"></span> POLÈNE</div></div>
-  <div class="filter-block"><h3>Prices</h3><strong>€110 – €490</strong><div class="range"></div><p class="small">Under €200<br>€200 to €400<br>Over €400</p></div>
+  <div class="filter-block"><h3>Prices</h3><strong>€160 – €540</strong><div class="range"></div><p class="small">Under €300<br>€300 to €450<br>Over €450</p></div>
   <div class="filter-block"><h3>Colour</h3><div class="check"><span class="box" style="background:#111"></span> Black</div><div class="check"><span class="box" style="background:#b87842"></span> Camel</div><div class="check"><span class="box" style="background:#c8a96b"></span> Gold</div></div>
 </aside>
 
@@ -78,31 +90,121 @@
     <div class="brand-info">
       <div class="polene">POLÈNE</div>
       <h2>Sculptural lines. Parisian elegance.</h2>
-      <p>Discover our Polène store concept on Amazon.fr, featuring bags, small leather goods and jewelry in a familiar marketplace experience.</p>
+      <p>Discover our Polène handbag concept on Amazon.fr, focused exclusively on the brand’s signature bags in a familiar marketplace experience.</p>
       <div class="sponsored">Sponsored · non-commercial academic prototype</div>
     </div>
   </section>
 
   <div class="minirow">
     <div class="mini"><img src="https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-dix-noir-lisse.png?v=1682503348&width=700" alt="Numéro Dix"><div><strong>Best seller</strong><span>Numéro Dix</span></div></div>
-    <div class="mini"><img src="https://www.polene-paris.com/cdn/shop/files/packshot-front_cyme-cognac-grain_e03da690-017b-44ef-a822-1abaf80f0c08.png?v=1728979982&width=700" alt="Cyme"><div><strong>New</strong><span>Cyme</span></div></div>
-    <div class="mini"><img src="https://www.polene-paris.com/cdn/shop/files/packshot-front_porte-carte-neiti-camel_bfdd284d-7695-44f8-8a27-72f145dba5a1.png?v=1689085415&width=700" alt="Porte-cartes Neiti"><div><strong>Small Leather Goods</strong><span>Neiti</span></div></div>
-    <div class="mini"><img src="https://www.polene-paris.com/cdn/shop/files/packshot-front_boucles_creoles_eole_f5757467-2665-4d80-aacc-6c902e62a487.png?v=1730111992&width=700" alt="Créoles Éole"><div><strong>Jewelry</strong><span>Éole</span></div></div>
+    <div class="mini"><img src="https://www.polene-paris.com/cdn/shop/files/packshot-front_cyme-cognac-grain_e03da690-017b-44ef-a822-1abaf80f0c08.png?v=1728979982&width=700" alt="Cyme"><div><strong>Tote</strong><span>Cyme</span></div></div>
+    <div class="mini"><img src="https://euro.polene-paris.com/cdn/shop/files/packshot-front_numero-neuf-camel-grain.png?v=1682496843&width=700" alt="Numéro Neuf"><div><strong>Signature</strong><span>Numéro Neuf</span></div></div>
+    <div class="mini"><img src="https://euro.polene-paris.com/cdn/shop/files/packshot-front_beri-bandouliere-noir-grain.png?v=1682494910&width=700" alt="Béri"><div><strong>Compact</strong><span>Béri</span></div></div>
   </div>
 
   <section class="results-head">
     <h2>Results</h2>
-    <p><a href="#case">Learn about these results.</a> Prices, availability, reviews, Prime and delivery information are shown only for this academic demonstration. Some additional listings use campaign imagery rather than exact product photos.</p>
+    <p><a href="#case">Learn about these results.</a> Prices, availability, reviews, Prime and delivery information are shown only for this academic demonstration. The catalogue is now limited to Polène bags only.</p>
   </section>
 
   <section class="products" id="products"></section>
+
+
+  <section class="strategy" id="sea">
+    <div class="strategy-hero">
+      <div class="strategy-kicker">P3 · Search Engine Advertising</div>
+      <h2>Google SEA Strategy</h2>
+      <p><strong>Objective:</strong> capture high-intent customers searching for Polène or premium leather handbags, protect branded search visibility, and drive qualified traffic toward the proposed Polène Amazon.fr experience and official eCommerce ecosystem.</p>
+    </div>
+
+    <div class="strategy-grid">
+      <div class="strategy-card">
+        <h3>1 · Brand Protection</h3>
+        <p>Capture customers already searching for the brand.</p>
+        <ul><li>Polène</li><li>Polène Paris</li><li>Polène Numéro Dix</li><li>Polène Cyme</li></ul>
+        <p><strong>Goal:</strong> dominate branded search visibility and reduce the impact of resellers, counterfeit and dupe websites.</p>
+      </div>
+      <div class="strategy-card">
+        <h3>2 · Generic Acquisition</h3>
+        <p>Reach new customers who want a premium handbag but may not yet know Polène.</p>
+        <ul><li>Affordable luxury handbag</li><li>Premium French leather bag</li><li>Women's leather shoulder bag</li><li>Sculptural designer handbag</li></ul>
+        <p><strong>Goal:</strong> acquire new qualified prospects.</p>
+      </div>
+      <div class="strategy-card">
+        <h3>3 · Shopping / Performance Max</h3>
+        <p>Use Polène's premium product photography to feature flagship bags such as Numéro Dix, Cyme and Numéro Neuf in Shopping and visual placements.</p>
+        <p><strong>Goal:</strong> combine product imagery, price and availability with strong purchase intent.</p>
+      </div>
+    </div>
+
+    <div class="admock">
+      <div class="adurl">Sponsored · polene-paris.com</div>
+      <div class="adtitle">Official Polène Paris Website | Discover the Collection</div>
+      <div class="addesc">Contemporary leather goods designed in Paris and crafted in Spain. Discover iconic Polène bags including Numéro Dix, Cyme and Numéro Neuf.</div>
+    </div>
+
+    <div class="strategy-card">
+      <h3>Geographic & Audience Targeting</h3>
+      <p><strong>Priority markets:</strong> France, Spain, Italy, UK and USA, supported by localized campaigns. Use remarketing to re-engage visitors who explored products but did not purchase, with a mobile-first approach for digitally active urban professionals.</p>
+      <div class="kpis"><span class="kpi">CTR</span><span class="kpi">CPC</span><span class="kpi">Conversion Rate</span><span class="kpi">CPA</span><span class="kpi">ROAS</span><span class="kpi">Add-to-Basket Rate</span></div>
+    </div>
+  </section>
+
+  <section class="strategy" id="ecommerce">
+    <div class="strategy-hero">
+      <div class="strategy-kicker">P4 · Product Communication</div>
+      <h2>On-Page eCommerce Strategy — Shopify Plus</h2>
+      <p>We recommend <strong>Shopify Plus</strong> to create a premium online shopping experience that reflects Polène's identity while helping customers understand the size, functionality, materials, colours and differences between bag models before purchasing.</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature"><b>1. High-Quality Product Images</b><span>Front, back, side, interior, leather close-ups, strap details and lifestyle images.</span></div>
+      <div class="feature"><b>2. 360° Product View & Video</b><span>Let customers rotate bags and see how each model looks when worn.</span></div>
+      <div class="feature"><b>3. “What Fits Inside?”</b><span>Show realistic capacity using a phone, wallet, keys, sunglasses, card holder and small cosmetics.</span></div>
+      <div class="feature"><b>4. Product Comparison Tool</b><span>Compare bag styles, capacity and recommended use to simplify the purchase decision.</span></div>
+      <div class="feature"><b>5. Customer Reviews</b><span>Ratings, written reviews and customer photographs to increase trust and reassurance.</span></div>
+      <div class="feature"><b>6. Personalized Recommendations</b><span>You May Also Like, Similar Styles, Complete the Look and Recently Viewed.</span></div>
+      <div class="feature"><b>7. International Localization</b><span>Adapt language, currency, local pricing, delivery and returns for France, UK, USA and other markets.</span></div>
+      <div class="feature"><b>8. Mobile-First Design</b><span>Fast, easy access to images, colours, product information and the Add to Bag button on smartphones.</span></div>
+      <div class="feature"><b>9. Clear Delivery & Returns</b><span>Show estimated delivery dates and return conditions directly on product pages.</span></div>
+      <div class="feature"><b>10. Analytics</b><span>Track product views, add-to-cart, conversion, checkout abandonment, AOV, most-viewed bags and comparison usage.</span></div>
+    </div>
+
+    <h3>Product Comparison Example</h3>
+    <table class="compare">
+      <thead><tr><th>Model</th><th>Style</th><th>Capacity</th><th>Best Use</th></tr></thead>
+      <tbody>
+        <tr><td>Numéro Dix</td><td>Shoulder / Crossbody</td><td>Medium</td><td>Everyday</td></tr>
+        <tr><td>Cyme</td><td>Tote</td><td>Large</td><td>Work / Travel</td></tr>
+        <tr><td>Numéro Neuf Mini</td><td>Handbag</td><td>Small</td><td>Casual / Evening</td></tr>
+        <tr><td>Béri</td><td>Shoulder Bag</td><td>Compact</td><td>Everyday</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Proposed Customer Journey</h3>
+    <div class="journey">
+      <span class="step">Product Discovery</span><span class="arrow">→</span>
+      <span class="step">Detailed Information</span><span class="arrow">→</span>
+      <span class="step">360° / What Fits Inside?</span><span class="arrow">→</span>
+      <span class="step">Comparison</span><span class="arrow">→</span>
+      <span class="step">Reviews</span><span class="arrow">→</span>
+      <span class="step">Add to Bag</span><span class="arrow">→</span>
+      <span class="step">Purchase</span>
+    </div>
+
+    <div class="strategy-card">
+      <h3>Final Recommendation</h3>
+      <p><strong>Shopify Plus + 360° Product View + What Fits Inside? + Product Comparison + Customer Reviews + Personalized Recommendations + International Localization.</strong></p>
+      <p>The goal is to reduce uncertainty when purchasing premium handbags online and make the digital experience closer to visiting a physical Polène boutique.</p>
+    </div>
+  </section>
 
   <section class="case" id="case">
     <h2>Case Study Logic</h2>
     <div class="case-grid">
       <div class="case-card"><strong>Target Audience</strong><p>Urban professionals, mainly women aged 25–40, looking for distinctive premium accessories.</p></div>
       <div class="case-card"><strong>Differentiation</strong><p>Sculptural silhouettes, Parisian identity, recognizable design and a premium approach without relying on discounts.</p></div>
-      <div class="case-card"><strong>Proposed Seller Model</strong><p>A brand-operated seller account to maintain greater control over listings, assortment and presentation.</p></div>
+      <div class="case-card"><strong>Vendor Direct Fulfillment</strong><p>Amazon handles the retail relationship while Polène keeps inventory and ships orders directly, supporting greater control over premium packaging and fulfillment.</p></div>
     </div>
   </section>
 </main>
@@ -125,26 +227,23 @@ const products=[
 {id:1,name:'POLÈNE Numéro Dix — Smooth Black Edition, leather shoulder bag',cat:'bags',price:480,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-dix-noir-lisse.png?v=1682503348&width=1920',reviews:'128'},
 {id:2,name:'POLÈNE Cyme — Cognac Textured Edition, leather tote bag',cat:'bags',price:440,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_cyme-cognac-grain_e03da690-017b-44ef-a822-1abaf80f0c08.png?v=1728979982&width=1920',reviews:'94'},
 {id:3,name:'POLÈNE Numéro Neuf Mini — Textured Black Edition, mini bag',cat:'bags',price:390,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-neuf-mini-noir-grain.png?v=1682504822&width=1920',reviews:'77'},
-{id:4,name:'POLÈNE Neiti Card Holder — Duo Camel Edition',cat:'leather',price:110,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_porte-carte-neiti-camel_bfdd284d-7695-44f8-8a27-72f145dba5a1.png?v=1689085415&width=1920',reviews:'41'},
-{id:5,name:'POLÈNE Ormé Bangle — Gold & Camel Leather Edition',cat:'jewelry',price:220,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_jonc-orme-or-cuir-camel.png?v=1762953637&width=1920',reviews:'36'},
-{id:6,name:'POLÈNE Éole Hoop Earrings — 24-carat gold finish',cat:'jewelry',price:180,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_boucles_creoles_eole_f5757467-2665-4d80-aacc-6c902e62a487.png?v=1730111992&width=1920',reviews:'52'},
-{id:7,name:'POLÈNE Numéro Un — Structured Leather Handbag',cat:'bags',price:420,img:'https://www.polene-paris.com/cdn/shop/files/01_Visuel_Mega_Menu_2026.jpg?v=1783586333&width=1920',reviews:'—',illustrative:true},
-{id:8,name:'POLÈNE Numéro Sept — Shoulder Bag',cat:'bags',price:450,img:'https://www.polene-paris.com/cdn/shop/files/01_Visuel_Mega_Menu_2026.jpg?v=1783586333&width=1920',reviews:'—',illustrative:true},
-{id:9,name:'POLÈNE Numéro Huit — Bucket Bag',cat:'bags',price:390,img:'https://www.polene-paris.com/cdn/shop/files/01_Visuel_Mega_Menu_2026.jpg?v=1783586333&width=1920',reviews:'—',illustrative:true},
-{id:10,name:'POLÈNE Tonca — Sculptural Shoulder Bag',cat:'bags',price:440,img:'https://www.polene-paris.com/cdn/shop/files/01_Visuel_Mega_Menu_2026.jpg?v=1783586333&width=1920',reviews:'—',illustrative:true},
-{id:11,name:'POLÈNE Mokki — Leather Handbag',cat:'bags',price:490,img:'https://www.polene-paris.com/cdn/shop/files/01_Visuel_Mega_Menu_2026.jpg?v=1783586333&width=1920',reviews:'—',illustrative:true},
-{id:12,name:'POLÈNE Béri — Compact Leather Bag',cat:'bags',price:380,img:'https://www.polene-paris.com/cdn/shop/files/01_Visuel_Mega_Menu_2026.jpg?v=1783586333&width=1920',reviews:'—',illustrative:true}
+{id:4,name:'POLÈNE Mokki — Textured Camel, leather handbag',cat:'bags',price:540,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_daily-bag-camel.png?v=1709568364&width=1920',reviews:'84'},
+{id:5,name:'POLÈNE Numéro Neuf — Textured Camel, leather handbag',cat:'bags',price:440,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_numero-neuf-camel-grain.png?v=1682496843&width=1920',reviews:'116'},
+{id:6,name:'POLÈNE Numéro Un Nano — Trio Camel, leather handbag',cat:'bags',price:340,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_numero-un-nano-trio-camel.png?v=1682498958&width=1920',reviews:'102'},
+{id:7,name:'POLÈNE Numéro Un Micro — Textured Black, mini leather bag',cat:'bags',price:160,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_numero-un-micro-noir-grain.png?v=1682498395&width=1920',reviews:'58'},
+{id:8,name:'POLÈNE Béri — Textured Black, leather shoulder bag',cat:'bags',price:380,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_beri-bandouliere-noir-grain.png?v=1682494910&width=1920',reviews:'91'},
+{id:9,name:'POLÈNE Osmo — Smooth Black, leather shoulder bag',cat:'bags',price:440,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_osmo-full-noir.png?v=1738681900&width=1920',reviews:'47'}
 ];
 let cart=[];
 const euro=n=>n.toLocaleString('fr-FR',{style:'currency',currency:'EUR'});
 function render(list=products){
  document.getElementById('products').innerHTML=list.map(p=>`
  <article class="product">
-   <div class="photo"><img loading="lazy" src="${p.img}" alt="${p.illustrative ? 'Illustrative Polène campaign image, not exact product: ' : 'Product image: '}${p.name}"><span class="badge">${p.illustrative ? 'Illustrative image' : 'Concept Store'}</span></div>
+   <div class="photo"><img loading="lazy" src="${p.img}" alt="Product image: ${p.name}"><span class="badge">Concept Store</span></div>
    <div class="pbody">
      <h3>${p.name}</h3>
-     <div class="rating">${p.illustrative ? '<span style="color:#565959">Concept listing · no customer reviews</span>' : '★★★★☆ <span>Demo reviews</span>'}</div>
-     <div class="price"><sup>€</sup>${Math.floor(p.price)}<sup>00</sup></div>${p.illustrative ? '<div class="small">Illustrative price · campaign image is not this product</div>' : ''}
+     <div class="rating">★★★★☆ <span>Demo reviews</span></div>
+     <div class="price"><sup>€</sup>${Math.floor(p.price)}<sup>00</sup></div>
      <div class="prime">✓ prime <span style="color:#565959;font-weight:400">simulation</span></div>
      <div class="delivery"><strong>FREE Delivery</strong><br>Prototype — no real orders</div>
      <button class="add" onclick="add(${p.id})">Add to Basket</button>
