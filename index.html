@@ -261,15 +261,52 @@
 
 <script>
 const products=[
-{id:1,name:'POLÈNE Numéro Dix — Smooth Black Edition, leather shoulder bag',cat:'bags',price:480,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-dix-noir-lisse.png?v=1682503348&width=1920',reviews:'128',colour:'Smooth Black',type:'Shoulder / crossbody bag',bought:'100+ viewed in this concept',spin360:'assets/numero-dix-360.b64'},
-{id:2,name:'POLÈNE Cyme — Cognac Textured Edition, leather tote bag',cat:'bags',price:440,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_cyme-cognac-grain_e03da690-017b-44ef-a822-1abaf80f0c08.png?v=1728979982&width=1920',reviews:'94',colour:'Cognac Textured',type:'Leather tote bag',bought:'80+ viewed in this concept'},
-{id:3,name:'POLÈNE Numéro Neuf Mini — Textured Black Edition, mini bag',cat:'bags',price:390,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-neuf-mini-noir-grain.png?v=1682504822&width=1920',reviews:'77',colour:'Textured Black',type:'Mini leather handbag',bought:'60+ viewed in this concept'},
-{id:4,name:'POLÈNE Mokki — Textured Camel, leather handbag',cat:'bags',price:540,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_daily-bag-camel.png?v=1709568364&width=1920',reviews:'84',colour:'Textured Camel',type:'Leather handbag',bought:'70+ viewed in this concept'},
-{id:5,name:'POLÈNE Numéro Neuf — Textured Camel, leather handbag',cat:'bags',price:440,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_numero-neuf-camel-grain.png?v=1682496843&width=1920',reviews:'116',colour:'Textured Camel',type:'Sculptural leather handbag',bought:'90+ viewed in this concept'},
-{id:6,name:'POLÈNE Numéro Un Nano — Trio Camel, leather handbag',cat:'bags',price:340,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_numero-un-nano-trio-camel.png?v=1682498958&width=1920',reviews:'102',colour:'Trio Camel',type:'Compact leather handbag',bought:'85+ viewed in this concept'},
-{id:7,name:'POLÈNE Numéro Un Micro — Textured Black, mini leather bag',cat:'bags',price:160,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_numero-un-micro-noir-grain.png?v=1682498395&width=1920',reviews:'58',colour:'Textured Black',type:'Micro leather bag',bought:'40+ viewed in this concept'},
-{id:8,name:'POLÈNE Béri — Textured Black, leather shoulder bag',cat:'bags',price:380,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_beri-bandouliere-noir-grain.png?v=1682494910&width=1920',reviews:'91',colour:'Textured Black',type:'Leather shoulder bag',bought:'75+ viewed in this concept'},
-{id:9,name:'POLÈNE Osmo — Smooth Black, leather shoulder bag',cat:'bags',price:440,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_osmo-full-noir.png?v=1738681900&width=1920',reviews:'47',colour:'Smooth Black',type:'Leather shoulder bag',bought:'35+ viewed in this concept'}
+{id:1,name:'POLÈNE Numéro Dix — Smooth Black Edition, leather shoulder bag',cat:'bags',price:480,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-dix-noir-lisse.png?v=1682503348&width=1920',reviews:'128',colour:'Smooth Black',type:'Shoulder / crossbody bag',bought:'100+ viewed in this concept',images:[
+'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-dix-noir-lisse.png?v=1682503348&width=1920',
+'https://www.polene-paris.com/cdn/shop/files/04_N10_Noir_Lisse-8432000x2800px.jpg?v=1696580129&width=1920',
+'https://www.polene-paris.com/cdn/shop/files/04_N10_Noir_Lisse-8652000x2800px.jpg?v=1696580129&width=1920',
+'https://www.polene-paris.com/cdn/shop/files/04_N10_Noir_Lisse-8882000x2800px.jpg?v=1696580129&width=1920',
+'https://www.polene-paris.com/cdn/shop/files/04_N10_Noir_Lisse-9282000x2800px.jpg?v=1696580130&width=1920',
+'https://www.polene-paris.com/cdn/shop/files/04_N10_Noir_Lisse-9122000x2800px.jpg?v=1696580130&width=1920']},
+{id:2,name:'POLÈNE Cyme — Cognac Textured Edition, leather tote bag',cat:'bags',price:440,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_cyme-cognac-grain_e03da690-017b-44ef-a822-1abaf80f0c08.png?v=1728979982&width=1920',reviews:'94',colour:'Cognac Textured',type:'Leather tote bag',bought:'80+ viewed in this concept',images:[
+'https://www.polene-paris.com/cdn/shop/files/packshot-front_cyme-cognac-grain_e03da690-017b-44ef-a822-1abaf80f0c08.png?v=1728979982&width=1920',
+'https://www.polene-paris.com/cdn/shop/files/06_Cyme_Cognac-615_2000x2800px.jpg?v=1773652058&width=1920',
+'https://www.polene-paris.com/cdn/shop/files/06_Cyme_Cognac-591_2000x2800px.jpg?v=1773652058&width=1920',
+'https://www.polene-paris.com/cdn/shop/files/06_Cyme_Cognac-600_2000x2800px.jpg?v=1721805209&width=1920']},
+{id:3,name:'POLÈNE Numéro Neuf Mini — Textured Black Edition, mini bag',cat:'bags',price:390,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-neuf-mini-noir-grain.png?v=1682504822&width=1920',reviews:'77',colour:'Textured Black',type:'Mini leather handbag',bought:'60+ viewed in this concept',images:[
+'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-neuf-mini-noir-grain.png?v=1682504822&width=1920',
+'https://www.polene-paris.com/cdn/shop/products/NUMERO_NEUF_MINI_NOIR_0382000x2800px_86ad7f84-20dc-42ae-a421-dfbcef11e87b.jpg?v=1682504822&width=1920',
+'https://www.polene-paris.com/cdn/shop/products/NUMERO_NEUF_MINI_NOIR_0942000x2800px_a4d6f14d-9c39-45fe-9bb8-1f8daef73a03.jpg?v=1682504822&width=1920',
+'https://www.polene-paris.com/cdn/shop/products/NUMERO_NEUF_MINI_NOIR_0062000x2800px_fc8c71c8-cf59-43ec-a964-c46fc56025d2.jpg?v=1682504822&width=1920']},
+{id:4,name:'POLÈNE Mokki — Textured Camel, leather handbag',cat:'bags',price:540,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_daily-bag-camel.png?v=1709568364&width=1920',reviews:'84',colour:'Textured Camel',type:'Leather handbag',bought:'70+ viewed in this concept',images:[
+'https://euro.polene-paris.com/cdn/shop/files/packshot-front_daily-bag-camel.png?v=1709568364&width=1920',
+'https://www.polene-paris.com/cdn/shop/files/01_Daily_Bag_Camel-2812000x2800px.jpg?v=1709708562&width=1920',
+'https://www.polene-paris.com/cdn/shop/files/01_Daily_Bag_Camel-3102000x2800px.jpg?v=1709708562&width=1920',
+'https://www.polene-paris.com/cdn/shop/files/01_Daily_Bag_Camel-2532000x2800px.jpg?v=1709708562&width=1920']},
+{id:5,name:'POLÈNE Numéro Neuf — Textured Camel, leather handbag',cat:'bags',price:440,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_numero-neuf-camel-grain.png?v=1682496843&width=1920',reviews:'116',colour:'Textured Camel',type:'Sculptural leather handbag',bought:'90+ viewed in this concept',images:[
+'https://euro.polene-paris.com/cdn/shop/files/packshot-front_numero-neuf-camel-grain.png?v=1682496843&width=1920',
+'https://euro.polene-paris.com/cdn/shop/files/RECO_e63fafe2-db12-4c07-9bca-057593b0ef2f.jpg?v=1780392231&width=1920',
+'https://euro.polene-paris.com/cdn/shop/files/POLENE_SUMMER-2026_NUMERO-NEUF_CAMEL_02_2000x2800px.jpg?v=1780392231&width=1920',
+'https://euro.polene-paris.com/cdn/shop/files/POLENE_SUMMER-2026_NUMERO-NEUF_CAMEL_04_2000x2800px_cdd8a821-2c09-4df4-84c4-e93cba04e110.jpg?v=1780392233&width=1920']},
+{id:6,name:'POLÈNE Numéro Un Nano — Trio Camel, leather handbag',cat:'bags',price:340,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_numero-un-nano-trio-camel.png?v=1682498958&width=1920',reviews:'102',colour:'Trio Camel',type:'Compact leather handbag',bought:'85+ viewed in this concept',images:[
+'https://euro.polene-paris.com/cdn/shop/files/packshot-front_numero-un-nano-trio-camel.png?v=1682498958&width=1920',
+'https://www.polene-paris.com/cdn/shop/files/RECO_d2c2910e-1c80-4bb2-b54e-b925aa288076.jpg?v=1780393241&width=1920',
+'https://www.polene-paris.com/cdn/shop/files/POLENE_SUMMER-2026_NUMERO-UN-NANO_TRIO-CAMEL_02_2000x2800px.jpg?v=1780393242&width=1920']},
+{id:7,name:'POLÈNE Numéro Un Micro — Textured Black, mini leather bag',cat:'bags',price:160,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_numero-un-micro-noir-grain.png?v=1682498395&width=1920',reviews:'58',colour:'Textured Black',type:'Micro leather bag',bought:'40+ viewed in this concept',images:[
+'https://euro.polene-paris.com/cdn/shop/files/packshot-front_numero-un-micro-noir-grain.png?v=1682498395&width=1920',
+'https://www.polene-paris.com/cdn/shop/files/NUMERO_UN_MICRO_NOIR_0691.jpg?v=1698330314&width=1920',
+'https://www.polene-paris.com/cdn/shop/products/NUMERO_UN_MICRO_NOIR_1142000x2800px.jpg?v=1698330312&width=1920',
+'https://www.polene-paris.com/cdn/shop/products/NUMERO_UN_MICRO_NOIR_0792000x2800px.jpg?v=1698330312&width=1920']},
+{id:8,name:'POLÈNE Béri — Textured Black, leather shoulder bag',cat:'bags',price:380,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_beri-bandouliere-noir-grain.png?v=1682494910&width=1920',reviews:'91',colour:'Textured Black',type:'Leather shoulder bag',bought:'75+ viewed in this concept',images:[
+'https://euro.polene-paris.com/cdn/shop/files/packshot-front_beri-bandouliere-noir-grain.png?v=1682494910&width=1920',
+'https://www.polene-paris.com/cdn/shop/products/GLOBO_NOIR_BANDOULIERE_0552000x2800px.jpg?v=1682502235&width=1920',
+'https://www.polene-paris.com/cdn/shop/products/GLOBO_NOIR_BANDOULIERE_1242000x2800px.jpg?v=1682502235&width=1920',
+'https://www.polene-paris.com/cdn/shop/products/GLOBO_NOIR_BANDOULIERE_1602000x2800px.jpg?v=1682502235&width=1920']},
+{id:9,name:'POLÈNE Osmo — Smooth Black, leather shoulder bag',cat:'bags',price:440,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_osmo-full-noir.png?v=1738681900&width=1920',reviews:'47',colour:'Smooth Black',type:'Leather shoulder bag',bought:'35+ viewed in this concept',images:[
+'https://euro.polene-paris.com/cdn/shop/files/packshot-front_osmo-full-noir.png?v=1738681900&width=1920',
+'https://www.polene-paris.com/cdn/shop/files/1_b87fd6e6-13c2-4684-ae05-06684e14cff3.jpg?v=1738661491&width=1920',
+'https://www.polene-paris.com/cdn/shop/files/2_a0698ced-d925-4dd1-8284-e1eecae84692.jpg?v=1738661491&width=1920',
+'https://www.polene-paris.com/cdn/shop/files/3_48d6be9b-12ea-4622-aecb-db339cbf3bcd.jpg?v=1738661491&width=1920']}
 ];
 let cart=[];
 const euro=n=>n.toLocaleString('fr-FR',{style:'currency',currency:'EUR'});
@@ -297,11 +334,11 @@ function openProduct(id){
   document.getElementById('pdReviews').textContent='('+p.reviews+' demo reviews)';
   document.getElementById('pdBought').textContent=p.bought;
   document.getElementById('pdColour').textContent=p.colour;
-  document.getElementById('pdMainImg').src=p.img;
+  document.getElementById('pdMainImg').src=(p.images&&p.images[0])||p.img;
   document.getElementById('pdMainImg').alt=p.name;
   document.getElementById('pdPrice').innerHTML='<sup>€</sup>'+Math.floor(p.price)+'<sup>00</sup>';
   document.getElementById('pdBuyPrice').innerHTML='<sup>€</sup>'+Math.floor(p.price)+'<sup>00</sup>';
-  const thumbs=[p.img,p.img,p.img,p.img,p.img];
+  const thumbs=(p.images&&p.images.length?p.images:[p.img]);
   document.getElementById('pdThumbs').innerHTML=thumbs.map((x,i)=>'<button class="pd-thumb '+(i===0?'active':'')+'" onclick="selectThumb(this,\''+x+'\')"><img src="'+x+'" alt="Product view '+(i+1)+'"></button>').join('');
   const variants=products.filter(x=>x.id!==p.id).slice(0,5);
   document.getElementById('pdSwatches').innerHTML=[p,...variants].slice(0,5).map((v,i)=>'<button class="pd-swatch '+(i===0?'active':'')+'" onclick="openProduct('+v.id+')"><img src="'+v.img+'" alt="'+v.colour+'"><span>'+v.colour+'</span></button>').join('');
