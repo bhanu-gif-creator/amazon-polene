@@ -39,6 +39,20 @@
 .viewer-stage{height:min(560px,65vh);background:#f7f7f7;display:flex;align-items:center;justify-content:center;perspective:1200px;overflow:hidden;cursor:grab;touch-action:none;user-select:none}
 .viewer-stage:active{cursor:grabbing}.viewer-stage img{max-width:78%;max-height:78%;object-fit:contain;transform-style:preserve-3d;transition:transform .08s linear;pointer-events:none}
 .viewer-controls{padding:14px 18px 18px}.viewer-controls input{width:100%}.viewer-help{text-align:center;font-size:11px;color:#565959;margin-top:6px}
+
+/* Amazon-style product detail window */
+.product-link{cursor:pointer}.detail-link{border:0;background:none;color:var(--blue);font-size:12px;padding:7px 0;text-decoration:underline}
+.product-detail{position:fixed;inset:0;background:rgba(0,0,0,.64);z-index:80;display:none;align-items:center;justify-content:center;padding:18px}.product-detail.on{display:flex}
+.pd-shell{width:min(1540px,98vw);height:min(850px,94vh);background:#fff;border-radius:8px;box-shadow:0 12px 45px #0005;overflow:hidden;display:flex;flex-direction:column}
+.pd-top{display:flex;align-items:center;justify-content:space-between;padding:11px 17px;border-bottom:1px solid #ddd;background:#fff}.pd-top strong{font-size:12px;color:#565959}.pd-close{border:0;background:none;font-size:28px;line-height:1}
+.pd-body{display:grid;grid-template-columns:minmax(430px,1.25fr) minmax(390px,.95fr) 310px;gap:24px;padding:24px;overflow:auto;flex:1}
+.pd-gallery{display:grid;grid-template-columns:66px 1fr;gap:16px;min-width:0}.pd-thumbs{display:flex;flex-direction:column;gap:9px}.pd-thumb{width:56px;height:56px;border:1px solid #aaa;border-radius:7px;background:#fff;padding:3px;overflow:hidden}.pd-thumb.active{border:2px solid #007185;box-shadow:0 0 0 2px #c8f3fa}.pd-thumb img{width:100%;height:100%;object-fit:contain}
+.pd-main{height:610px;display:flex;align-items:center;justify-content:center;background:#fff;overflow:hidden}.pd-main img{max-width:100%;max-height:100%;object-fit:contain}
+.pd-info{min-width:0}.pd-title{font-size:24px;line-height:1.28;font-weight:500;margin:0 0 5px}.pd-sub{font-size:14px;line-height:1.4;color:#565959;margin:0 0 5px}.pd-store{color:#007185;font-size:14px}.pd-rating{font-size:14px;margin:7px 0}.pd-rating .stars{font-size:18px;color:#de7921}.pd-bought{font-size:13px;font-weight:700;border-bottom:1px solid #ddd;padding-bottom:13px;margin-bottom:15px}.pd-deal{display:inline-block;background:#cc0c39;color:#fff;font-weight:700;padding:7px 10px;border-radius:4px;font-size:12px}.pd-price{font-size:30px;margin:8px 0}.pd-price sup{font-size:14px;vertical-align:top}.pd-return{color:#007185;font-size:14px;margin:12px 0}.pd-vat{font-size:13px;line-height:1.45;color:#333}.pd-colour{font-size:13px;margin:10px 0 7px}.pd-swatches{display:grid;grid-template-columns:repeat(5,82px);gap:8px;margin-bottom:18px}.pd-swatch{border:1px solid #999;border-radius:7px;padding:7px;background:#fff;text-align:center;font-size:10px}.pd-swatch.active{border:3px solid #007185;padding:5px}.pd-swatch img{width:58px;height:58px;object-fit:contain;display:block;margin:auto}.pd-features{border-top:1px solid #ddd;padding-top:14px;margin-top:10px}.pd-features li{font-size:13px;line-height:1.5;margin:5px 0}
+.pd-buybox{border:1px solid #ddd;border-radius:8px;padding:18px;height:max-content;box-shadow:0 0 0 1px #f3f3f3}.pd-buyprice{font-size:28px}.pd-buyprice sup{font-size:13px;vertical-align:top}.pd-delivery{font-size:13px;line-height:1.45;margin:16px 0}.pd-location{color:#007185;font-size:13px;margin:13px 0}.pd-stock{color:#067d62;font-size:19px;margin:13px 0}.pd-qty{width:100%;padding:8px 10px;border:1px solid #888;border-radius:8px;background:#f7fafa;margin-bottom:12px}.pd-add,.pd-buy{width:100%;border:0;border-radius:22px;padding:11px;margin:6px 0;font-size:13px}.pd-add{background:#ffd814}.pd-buy{background:#ffa41c}.pd-meta{display:grid;grid-template-columns:95px 1fr;gap:5px;font-size:11px;line-height:1.4;margin-top:15px}.pd-meta span:nth-child(odd){color:#565959}.pd-disclaimer{margin-top:13px;padding-top:12px;border-top:1px solid #ddd;font-size:10px;color:#777}
+@media(max-width:1100px){.pd-body{grid-template-columns:1fr 1fr}.pd-buybox{grid-column:1/-1}.pd-main{height:480px}}
+@media(max-width:760px){.product-detail{padding:0}.pd-shell{width:100vw;height:100vh;border-radius:0}.pd-body{display:block;padding:14px}.pd-gallery{grid-template-columns:1fr}.pd-thumbs{flex-direction:row;order:2;overflow:auto}.pd-main{height:360px}.pd-info{margin-top:18px}.pd-buybox{margin-top:18px}.pd-swatches{grid-template-columns:repeat(3,82px)}}
+
 @media(max-width:900px){.feature-grid{grid-template-columns:1fr}}
 @media(max-width:1100px){.header{grid-template-columns:auto 1fr auto auto}.loc,.lang,.orders{display:none}.search{grid-column:2/3}.products{grid-template-columns:repeat(3,1fr)}.minirow{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.academic{font-size:9px}.header{grid-template-columns:auto 1fr auto;padding:7px 9px}.account{display:none}.amz{font-size:24px}.search{grid-column:1/-1;grid-row:2}.nav1,.nav2{padding-left:10px;gap:16px}.results-top{padding:11px 10px;font-size:12px}.layout{display:block}.sidebar{display:none}.content{padding:12px 9px 28px}.mobilefilter{display:inline-block;border:1px solid #aaa;border-radius:8px;background:#fff;padding:7px 10px;margin-bottom:10px;font-size:12px}.brand-banner{grid-template-columns:1fr;min-height:0}.brand-banner .visual{height:240px}.brand-banner .visual img{position:relative}.brand-info{padding:24px}.polene{font-size:35px}.minirow{grid-template-columns:1fr 1fr}.mini{grid-template-columns:55px 1fr}.mini img{width:55px;height:55px}.products{grid-template-columns:repeat(2,1fr);gap:9px}.photo{height:210px}.pbody h3{font-size:13px}.price{font-size:22px}.case-grid{grid-template-columns:1fr}.foot{grid-template-columns:1fr}.sort{display:none}}
@@ -181,6 +195,56 @@
   <div class="ditems" id="cartItems"></div>
   <div class="dbottom"><div style="display:flex;justify-content:space-between"><strong>Subtotal</strong><strong id="total">0,00 €</strong></div><button class="checkout" onclick="notify('Checkout disabled: academic prototype.')">Proceed to Checkout — Demo</button></div>
 </aside>
+
+<div class="product-detail" id="productDetail" onclick="if(event.target===this)closeProduct()">
+  <div class="pd-shell">
+    <div class="pd-top">
+      <strong>Amazon.fr × Polène · Academic product-page simulation</strong>
+      <button class="pd-close" onclick="closeProduct()" aria-label="Close">×</button>
+    </div>
+    <div class="pd-body">
+      <section class="pd-gallery">
+        <div class="pd-thumbs" id="pdThumbs"></div>
+        <div class="pd-main"><img id="pdMainImg" src="" alt="Product image"></div>
+      </section>
+      <section class="pd-info">
+        <h1 class="pd-title" id="pdTitle"></h1>
+        <p class="pd-sub" id="pdSub"></p>
+        <div class="pd-store">Visit the POLÈNE Concept Store</div>
+        <div class="pd-rating"><span>4.7</span> <span class="stars">★★★★☆</span> <span style="color:#007185" id="pdReviews"></span></div>
+        <div class="pd-bought" id="pdBought"></div>
+        <span class="pd-deal">Featured premium selection</span>
+        <div class="pd-price" id="pdPrice"></div>
+        <div class="pd-return">FREE Returns ▾</div>
+        <div class="pd-vat">Prices shown are for this academic Amazon.fr concept. VAT and delivery information are presented as demonstration elements.</div>
+        <div class="pd-colour"><strong>Colour:</strong> <span id="pdColour"></span></div>
+        <div class="pd-swatches" id="pdSwatches"></div>
+        <div class="pd-features">
+          <strong>About this item</strong>
+          <ul id="pdFeatures"></ul>
+        </div>
+      </section>
+      <aside class="pd-buybox">
+        <div class="pd-buyprice" id="pdBuyPrice"></div>
+        <div class="pd-return">FREE Returns ▾</div>
+        <div class="pd-delivery"><strong>FREE delivery</strong> on eligible orders in this academic simulation.<br><br>Fast delivery option shown for demonstration.</div>
+        <div class="pd-location">⌖ Delivering to France — Update location</div>
+        <div class="pd-stock">In stock</div>
+        <select class="pd-qty" id="pdQty"><option>Quantity: 1</option><option>Quantity: 2</option><option>Quantity: 3</option></select>
+        <button class="pd-add" id="pdAdd">Add to basket</button>
+        <button class="pd-buy" id="pdBuy">Buy Now</button>
+        <div class="pd-meta">
+          <span>Dispatches from</span><b>POLÈNE / VDF concept</b>
+          <span>Sold by</span><b>Amazon.fr concept</b>
+          <span>Returns</span><b style="color:#007185">Return a product</b>
+          <span>Packaging</span><b>Premium Polène packaging</b>
+        </div>
+        <div class="pd-disclaimer">Academic prototype only. No real order or payment is processed.</div>
+      </aside>
+    </div>
+  </div>
+</div>
+
 <div class="viewer360" id="viewer360" onclick="if(event.target===this)close360()">
   <div class="viewer-card">
     <div class="viewer-head"><strong id="viewerTitle">360° Product View</strong><button onclick="close360()" aria-label="Close">×</button></div>
@@ -197,32 +261,71 @@
 
 <script>
 const products=[
-{id:1,name:'POLÈNE Numéro Dix — Smooth Black Edition, leather shoulder bag',cat:'bags',price:480,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-dix-noir-lisse.png?v=1682503348&width=1920',reviews:'128',spin360:'assets/numero-dix-360.b64'},
-{id:2,name:'POLÈNE Cyme — Cognac Textured Edition, leather tote bag',cat:'bags',price:440,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_cyme-cognac-grain_e03da690-017b-44ef-a822-1abaf80f0c08.png?v=1728979982&width=1920',reviews:'94'},
-{id:3,name:'POLÈNE Numéro Neuf Mini — Textured Black Edition, mini bag',cat:'bags',price:390,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-neuf-mini-noir-grain.png?v=1682504822&width=1920',reviews:'77'},
-{id:4,name:'POLÈNE Mokki — Textured Camel, leather handbag',cat:'bags',price:540,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_daily-bag-camel.png?v=1709568364&width=1920',reviews:'84'},
-{id:5,name:'POLÈNE Numéro Neuf — Textured Camel, leather handbag',cat:'bags',price:440,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_numero-neuf-camel-grain.png?v=1682496843&width=1920',reviews:'116'},
-{id:6,name:'POLÈNE Numéro Un Nano — Trio Camel, leather handbag',cat:'bags',price:340,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_numero-un-nano-trio-camel.png?v=1682498958&width=1920',reviews:'102'},
-{id:7,name:'POLÈNE Numéro Un Micro — Textured Black, mini leather bag',cat:'bags',price:160,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_numero-un-micro-noir-grain.png?v=1682498395&width=1920',reviews:'58'},
-{id:8,name:'POLÈNE Béri — Textured Black, leather shoulder bag',cat:'bags',price:380,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_beri-bandouliere-noir-grain.png?v=1682494910&width=1920',reviews:'91'},
-{id:9,name:'POLÈNE Osmo — Smooth Black, leather shoulder bag',cat:'bags',price:440,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_osmo-full-noir.png?v=1738681900&width=1920',reviews:'47'}
+{id:1,name:'POLÈNE Numéro Dix — Smooth Black Edition, leather shoulder bag',cat:'bags',price:480,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-dix-noir-lisse.png?v=1682503348&width=1920',reviews:'128',colour:'Smooth Black',type:'Shoulder / crossbody bag',bought:'100+ viewed in this concept',spin360:'assets/numero-dix-360.b64'},
+{id:2,name:'POLÈNE Cyme — Cognac Textured Edition, leather tote bag',cat:'bags',price:440,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_cyme-cognac-grain_e03da690-017b-44ef-a822-1abaf80f0c08.png?v=1728979982&width=1920',reviews:'94',colour:'Cognac Textured',type:'Leather tote bag',bought:'80+ viewed in this concept'},
+{id:3,name:'POLÈNE Numéro Neuf Mini — Textured Black Edition, mini bag',cat:'bags',price:390,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-neuf-mini-noir-grain.png?v=1682504822&width=1920',reviews:'77',colour:'Textured Black',type:'Mini leather handbag',bought:'60+ viewed in this concept'},
+{id:4,name:'POLÈNE Mokki — Textured Camel, leather handbag',cat:'bags',price:540,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_daily-bag-camel.png?v=1709568364&width=1920',reviews:'84',colour:'Textured Camel',type:'Leather handbag',bought:'70+ viewed in this concept'},
+{id:5,name:'POLÈNE Numéro Neuf — Textured Camel, leather handbag',cat:'bags',price:440,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_numero-neuf-camel-grain.png?v=1682496843&width=1920',reviews:'116',colour:'Textured Camel',type:'Sculptural leather handbag',bought:'90+ viewed in this concept'},
+{id:6,name:'POLÈNE Numéro Un Nano — Trio Camel, leather handbag',cat:'bags',price:340,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_numero-un-nano-trio-camel.png?v=1682498958&width=1920',reviews:'102',colour:'Trio Camel',type:'Compact leather handbag',bought:'85+ viewed in this concept'},
+{id:7,name:'POLÈNE Numéro Un Micro — Textured Black, mini leather bag',cat:'bags',price:160,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_numero-un-micro-noir-grain.png?v=1682498395&width=1920',reviews:'58',colour:'Textured Black',type:'Micro leather bag',bought:'40+ viewed in this concept'},
+{id:8,name:'POLÈNE Béri — Textured Black, leather shoulder bag',cat:'bags',price:380,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_beri-bandouliere-noir-grain.png?v=1682494910&width=1920',reviews:'91',colour:'Textured Black',type:'Leather shoulder bag',bought:'75+ viewed in this concept'},
+{id:9,name:'POLÈNE Osmo — Smooth Black, leather shoulder bag',cat:'bags',price:440,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_osmo-full-noir.png?v=1738681900&width=1920',reviews:'47',colour:'Smooth Black',type:'Leather shoulder bag',bought:'35+ viewed in this concept'}
 ];
 let cart=[];
 const euro=n=>n.toLocaleString('fr-FR',{style:'currency',currency:'EUR'});
 function render(list=products){
  document.getElementById('products').innerHTML=list.map(p=>`
  <article class="product">
-   <div class="photo"><img loading="lazy" src="${p.img}" alt="Product image: ${p.name}"><span class="badge">Concept Store</span></div>
+   <div class="photo product-link" onclick="openProduct(${p.id})"><img loading="lazy" src="${p.img}" alt="Product image: ${p.name}"><span class="badge">Concept Store</span></div>
    <div class="pbody">
-     <h3>${p.name}</h3>
+     <h3 class="product-link" onclick="openProduct(${p.id})">${p.name}</h3>
      <div class="rating">★★★★☆ <span>Demo reviews</span></div>
      <div class="price"><sup>€</sup>${Math.floor(p.price)}<sup>00</sup></div>
      <div class="prime">✓ prime <span style="color:#565959;font-weight:400">simulation</span></div>
      <div class="delivery"><strong>FREE Delivery</strong></div>
-     <button class="add" onclick="add(${p.id})">Add to Basket</button><button class="view360" onclick="open360(${p.id})">↻ 360° View</button>
+     <button class="add" onclick="add(${p.id})">Add to Basket</button><button class="detail-link" onclick="openProduct(${p.id})">View product details</button>
    </div>
  </article>`).join('');
 }
+
+let activeProductId=null;
+function openProduct(id){
+  const p=products.find(x=>x.id===id); if(!p)return;
+  activeProductId=id;
+  document.getElementById('pdTitle').textContent=p.name;
+  document.getElementById('pdSub').textContent=p.type+' · Parisian design · premium leather craftsmanship';
+  document.getElementById('pdReviews').textContent='('+p.reviews+' demo reviews)';
+  document.getElementById('pdBought').textContent=p.bought;
+  document.getElementById('pdColour').textContent=p.colour;
+  document.getElementById('pdMainImg').src=p.img;
+  document.getElementById('pdMainImg').alt=p.name;
+  document.getElementById('pdPrice').innerHTML='<sup>€</sup>'+Math.floor(p.price)+'<sup>00</sup>';
+  document.getElementById('pdBuyPrice').innerHTML='<sup>€</sup>'+Math.floor(p.price)+'<sup>00</sup>';
+  const thumbs=[p.img,p.img,p.img,p.img,p.img];
+  document.getElementById('pdThumbs').innerHTML=thumbs.map((x,i)=>'<button class="pd-thumb '+(i===0?'active':'')+'" onclick="selectThumb(this,\''+x+'\')"><img src="'+x+'" alt="Product view '+(i+1)+'"></button>').join('');
+  const variants=products.filter(x=>x.id!==p.id).slice(0,5);
+  document.getElementById('pdSwatches').innerHTML=[p,...variants].slice(0,5).map((v,i)=>'<button class="pd-swatch '+(i===0?'active':'')+'" onclick="openProduct('+v.id+')"><img src="'+v.img+'" alt="'+v.colour+'"><span>'+v.colour+'</span></button>').join('');
+  document.getElementById('pdFeatures').innerHTML=[
+    'Premium Polène leather design with a distinctive sculptural silhouette.',
+    'Designed for everyday use with a refined Parisian aesthetic.',
+    'Product dimensions, capacity and carrying style should be clearly communicated online.',
+    'Premium packaging and controlled fulfillment support the proposed brand experience.'
+  ].map(x=>'<li>'+x+'</li>').join('');
+  document.getElementById('pdAdd').onclick=()=>{add(id);};
+  document.getElementById('pdBuy').onclick=()=>{add(id);closeProduct();cartToggle(true);};
+  document.getElementById('productDetail').classList.add('on');
+  document.body.style.overflow='hidden';
+}
+function selectThumb(btn,src){
+  document.querySelectorAll('.pd-thumb').forEach(x=>x.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('pdMainImg').src=src;
+}
+function closeProduct(){
+  document.getElementById('productDetail').classList.remove('on');
+  document.body.style.overflow='';
+}
+
 function searchFromTop(){const q=document.getElementById('topSearch').value.trim().toLowerCase();const list=!q||q==='polène'||q==='polene'?products:products.filter(p=>p.name.toLowerCase().includes(q));render(list);document.querySelector('.results-head').scrollIntoView()}
 function add(id){cart.push(id);updateCart();notify('Added to demo basket')}
 function updateCart(){document.getElementById('cartCount').textContent=cart.length;document.getElementById('cartItems').innerHTML=cart.length?cart.map((id,i)=>{const p=products.find(x=>x.id===id);return `<div class="ci"><div><strong>${p.name}</strong><br><button onclick="removeItem(${i})">Remove</button></div><strong>${euro(p.price)}</strong></div>`}).join(''):'<p>Your basket is empty.</p>';document.getElementById('total').textContent=euro(cart.reduce((s,id)=>s+products.find(p=>p.id===id).price,0))}
@@ -263,7 +366,7 @@ const vs=document.getElementById('viewerStage');
 vs.addEventListener('pointerdown',e=>{dragging=true;lastX=e.clientX;vs.setPointerCapture(e.pointerId)});
 vs.addEventListener('pointermove',e=>{if(!dragging)return;viewAngle+=(e.clientX-lastX)*0.8;lastX=e.clientX;apply360()});
 vs.addEventListener('pointerup',()=>dragging=false);vs.addEventListener('pointercancel',()=>dragging=false);
-document.addEventListener('keydown',e=>{if(e.key==='Escape')close360()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){close360();closeProduct();}});
 
 document.getElementById('topSearch').addEventListener('keydown',e=>{if(e.key==='Enter')searchFromTop()});
 render();updateCart();
