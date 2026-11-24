@@ -188,8 +188,8 @@
       <img id="viewerImg" src="" alt="Interactive 360 degree product preview">
     </div>
     <div class="viewer-controls">
-      <input id="viewerRange" type="range" min="0" max="360" value="0" aria-label="Rotate product">
-      <div class="viewer-help">Numéro Dix uses an animated multi-angle 360° spin. Other products use the interactive preview.</div>
+      <input id="viewerRange" type="range" min="0" max="3" value="0" aria-label="Rotate product">
+      <div class="viewer-help">Drag left or right, or use the slider, to move through the Numéro Dix product views.</div>
     </div>
   </div>
 </div>
@@ -197,7 +197,7 @@
 
 <script>
 const products=[
-{id:1,name:'POLÈNE Numéro Dix — Smooth Black Edition, leather shoulder bag',cat:'bags',price:480,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-dix-noir-lisse.png?v=1682503348&width=1920',reviews:'128',spin360:'assets/numero-dix-360.b64'},
+{id:1,name:'POLÈNE Numéro Dix — Smooth Black Edition, leather shoulder bag',cat:'bags',price:480,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-dix-noir-lisse.png?v=1682503348&width=1920',reviews:'128',frames360:['assets/numero-dix-frame-1.b64','assets/numero-dix-frame-2.b64','assets/numero-dix-frame-3.b64','assets/numero-dix-frame-4.b64']},
 {id:2,name:'POLÈNE Cyme — Cognac Textured Edition, leather tote bag',cat:'bags',price:440,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_cyme-cognac-grain_e03da690-017b-44ef-a822-1abaf80f0c08.png?v=1728979982&width=1920',reviews:'94'},
 {id:3,name:'POLÈNE Numéro Neuf Mini — Textured Black Edition, mini bag',cat:'bags',price:390,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-neuf-mini-noir-grain.png?v=1682504822&width=1920',reviews:'77'},
 {id:4,name:'POLÈNE Mokki — Textured Camel, leather handbag',cat:'bags',price:540,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_daily-bag-camel.png?v=1709568364&width=1920',reviews:'84'},
@@ -219,7 +219,7 @@ function render(list=products){
      <div class="price"><sup>€</sup>${Math.floor(p.price)}<sup>00</sup></div>
      <div class="prime">✓ prime <span style="color:#565959;font-weight:400">simulation</span></div>
      <div class="delivery"><strong>FREE Delivery</strong></div>
-     <button class="add" onclick="add(${p.id})">Add to Basket</button><button class="view360" onclick="open360(${p.id})">↻ 360° View</button>
+     <button class="add" onclick="add(${p.id})">Add to Basket</button>${p.frames360?`<button class="view360" onclick="open360(${p.id})">↻ 360° View</button>`:""}
    </div>
  </article>`).join('');
 }
@@ -230,39 +230,50 @@ function removeItem(i){cart.splice(i,1);updateCart()}
 function cartToggle(open){document.getElementById('overlay').classList.toggle('on',open);document.getElementById('drawer').classList.toggle('on',open)}
 let t;function notify(msg){const e=document.getElementById('toast');e.textContent=msg;e.classList.add('on');clearTimeout(t);t=setTimeout(()=>e.classList.remove('on'),2300)}
 
-let viewAngle=0,dragging=false,lastX=0;
-function apply360(){const img=document.getElementById('viewerImg');img.style.transform='perspective(1000px) rotateY('+viewAngle+'deg)';document.getElementById('viewerRange').value=((viewAngle%360)+360)%360}
+let frameIndex=0,dragging=false,lastX=0,currentFrames=[];
+async function loadFrameData(path){
+  const b64=await fetch(path,{cache:'no-store'}).then(r=>r.text());
+  return 'data:image/jpeg;base64,'+b64.trim();
+}
+function showFrame(i){
+  if(!currentFrames.length)return;
+  frameIndex=(i+currentFrames.length)%currentFrames.length;
+  document.getElementById('viewerImg').style.transform='none';
+  document.getElementById('viewerImg').src=currentFrames[frameIndex];
+  document.getElementById('viewerRange').value=frameIndex;
+}
 async function open360(id){
   const p=products.find(x=>x.id===id);
-  if(!p)return;
-  const img=document.getElementById('viewerImg');
+  if(!p||!p.frames360)return;
   document.getElementById('viewerTitle').textContent=p.name;
-  if(p.spin360){
-    try{
-      const b64=await fetch(p.spin360,{cache:'no-store'}).then(r=>r.text());
-      img.style.transform='none';
-      img.src='data:image/gif;base64,'+b64.trim();
-      document.getElementById('viewerRange').style.display='none';
-      document.querySelector('.viewer-help').textContent='Animated 360° multi-angle product spin for Numéro Dix.';
-    }catch(e){
-      img.src=p.img;
-      document.getElementById('viewerRange').style.display='block';
-      viewAngle=0;apply360();
-    }
-  }else{
-    img.src=p.img;
-    document.getElementById('viewerRange').style.display='block';
-    document.querySelector('.viewer-help').textContent='Drag the product or use the slider to rotate the interactive preview.';
-    viewAngle=0;apply360();
-  }
+  document.getElementById('viewerRange').max=String(p.frames360.length-1);
+  document.getElementById('viewerRange').style.display='block';
+  document.querySelector('.viewer-help').textContent='Drag left or right, or use the slider, to move through the Numéro Dix product views.';
   document.getElementById('viewer360').classList.add('on');
+  try{
+    currentFrames=await Promise.all(p.frames360.map(loadFrameData));
+    showFrame(0);
+  }catch(e){
+    currentFrames=[p.img];
+    showFrame(0);
+    document.querySelector('.viewer-help').textContent='Product preview';
+  }
 }
 function close360(){document.getElementById('viewer360').classList.remove('on')}
-const vr=document.getElementById('viewerRange');vr.addEventListener('input',()=>{viewAngle=Number(vr.value);apply360()});
+const vr=document.getElementById('viewerRange');
+vr.addEventListener('input',()=>showFrame(Number(vr.value)));
 const vs=document.getElementById('viewerStage');
 vs.addEventListener('pointerdown',e=>{dragging=true;lastX=e.clientX;vs.setPointerCapture(e.pointerId)});
-vs.addEventListener('pointermove',e=>{if(!dragging)return;viewAngle+=(e.clientX-lastX)*0.8;lastX=e.clientX;apply360()});
-vs.addEventListener('pointerup',()=>dragging=false);vs.addEventListener('pointercancel',()=>dragging=false);
+vs.addEventListener('pointermove',e=>{
+  if(!dragging)return;
+  const dx=e.clientX-lastX;
+  if(Math.abs(dx)>35){
+    showFrame(frameIndex+(dx<0?1:-1));
+    lastX=e.clientX;
+  }
+});
+vs.addEventListener('pointerup',()=>dragging=false);
+vs.addEventListener('pointercancel',()=>dragging=false);
 document.addEventListener('keydown',e=>{if(e.key==='Escape')close360()});
 
 document.getElementById('topSearch').addEventListener('keydown',e=>{if(e.key==='Enter')searchFromTop()});
