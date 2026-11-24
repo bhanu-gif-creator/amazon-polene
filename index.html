@@ -189,7 +189,7 @@
     </div>
     <div class="viewer-controls">
       <input id="viewerRange" type="range" min="0" max="360" value="0" aria-label="Rotate product">
-      <div class="viewer-help">Drag the product or use the slider to rotate the 360° preview.</div>
+      <div class="viewer-help">Numéro Dix uses an animated multi-angle 360° spin. Other products use the interactive preview.</div>
     </div>
   </div>
 </div>
@@ -197,7 +197,7 @@
 
 <script>
 const products=[
-{id:1,name:'POLÈNE Numéro Dix — Smooth Black Edition, leather shoulder bag',cat:'bags',price:480,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-dix-noir-lisse.png?v=1682503348&width=1920',reviews:'128'},
+{id:1,name:'POLÈNE Numéro Dix — Smooth Black Edition, leather shoulder bag',cat:'bags',price:480,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-dix-noir-lisse.png?v=1682503348&width=1920',reviews:'128',spin360:'assets/numero-dix-360.b64'},
 {id:2,name:'POLÈNE Cyme — Cognac Textured Edition, leather tote bag',cat:'bags',price:440,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_cyme-cognac-grain_e03da690-017b-44ef-a822-1abaf80f0c08.png?v=1728979982&width=1920',reviews:'94'},
 {id:3,name:'POLÈNE Numéro Neuf Mini — Textured Black Edition, mini bag',cat:'bags',price:390,img:'https://www.polene-paris.com/cdn/shop/files/packshot-front_numero-neuf-mini-noir-grain.png?v=1682504822&width=1920',reviews:'77'},
 {id:4,name:'POLÈNE Mokki — Textured Camel, leather handbag',cat:'bags',price:540,img:'https://euro.polene-paris.com/cdn/shop/files/packshot-front_daily-bag-camel.png?v=1709568364&width=1920',reviews:'84'},
@@ -232,7 +232,31 @@ let t;function notify(msg){const e=document.getElementById('toast');e.textConten
 
 let viewAngle=0,dragging=false,lastX=0;
 function apply360(){const img=document.getElementById('viewerImg');img.style.transform='perspective(1000px) rotateY('+viewAngle+'deg)';document.getElementById('viewerRange').value=((viewAngle%360)+360)%360}
-function open360(id){const p=products.find(x=>x.id===id);if(!p)return;document.getElementById('viewerTitle').textContent=p.name;document.getElementById('viewerImg').src=p.img;viewAngle=0;apply360();document.getElementById('viewer360').classList.add('on')}
+async function open360(id){
+  const p=products.find(x=>x.id===id);
+  if(!p)return;
+  const img=document.getElementById('viewerImg');
+  document.getElementById('viewerTitle').textContent=p.name;
+  if(p.spin360){
+    try{
+      const b64=await fetch(p.spin360,{cache:'no-store'}).then(r=>r.text());
+      img.style.transform='none';
+      img.src='data:image/gif;base64,'+b64.trim();
+      document.getElementById('viewerRange').style.display='none';
+      document.querySelector('.viewer-help').textContent='Animated 360° multi-angle product spin for Numéro Dix.';
+    }catch(e){
+      img.src=p.img;
+      document.getElementById('viewerRange').style.display='block';
+      viewAngle=0;apply360();
+    }
+  }else{
+    img.src=p.img;
+    document.getElementById('viewerRange').style.display='block';
+    document.querySelector('.viewer-help').textContent='Drag the product or use the slider to rotate the interactive preview.';
+    viewAngle=0;apply360();
+  }
+  document.getElementById('viewer360').classList.add('on');
+}
 function close360(){document.getElementById('viewer360').classList.remove('on')}
 const vr=document.getElementById('viewerRange');vr.addEventListener('input',()=>{viewAngle=Number(vr.value);apply360()});
 const vs=document.getElementById('viewerStage');
